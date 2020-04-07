@@ -52,7 +52,7 @@ SRC_URI = "\
     git://codereview.qt-project.org/tqtc-boot2qt/qtsaferenderer;branch=${BRANCH};protocol=ssh;sdk-uri=Src/QtSafeRenderer-1.1.2 \
     file://0001-Fix-yocto-build-issues.patch \
     "
-SRCREV = "cbfac1e99ec83e28c36eb42762b801d9231b55c1"
+SRCREV = "8ddf39b89f9d3f298b3adb82766545b1cd812afc"
 
 DEPENDS = "qtbase qtdeclarative"
 
