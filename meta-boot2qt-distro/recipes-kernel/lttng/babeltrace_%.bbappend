@@ -27,5 +27,7 @@
 ##
 ############################################################################
 
-# use old class name still in use in warrior
-inherit distro_features_check
+FILESEXTRAPATHS_prepend := "${THISDIR}/${PN}:"
+SRC_URI += "\
+        git://git.efficios.com/babeltrace.git;branch=stable-1.5 \
+        "

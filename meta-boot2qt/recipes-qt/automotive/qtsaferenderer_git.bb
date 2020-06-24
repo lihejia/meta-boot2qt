@@ -1,6 +1,6 @@
 ############################################################################
 ##
-## Copyright (C) 2019 The Qt Company Ltd.
+## Copyright (C) 2020 The Qt Company Ltd.
 ## Contact: https://www.qt.io/licensing/
 ##
 ## This file is part of the Boot to Qt meta layer.
@@ -32,7 +32,7 @@ DESCRIPTION = "Qt Safe Renderer"
 LICENSE = "GPL-3.0 | The-Qt-Company-Commercial"
 LIC_FILES_CHKSUM = "file://${BOOT2QTBASE}/licenses/The-Qt-Company-Commercial;md5=213dc233cc25f71b1447fbe95ec90adf"
 
-inherit qt5-module sdk-sources distro_features_check
+inherit qt5-module sdk-sources features_check
 
 # the sources are not generally available, support must be explicitly enabled
 REQUIRED_DISTRO_FEATURES = "qtsaferenderer"

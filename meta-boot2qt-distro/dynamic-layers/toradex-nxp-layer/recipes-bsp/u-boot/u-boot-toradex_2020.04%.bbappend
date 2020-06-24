@@ -1,6 +1,6 @@
 ############################################################################
 ##
-## Copyright (C) 2019 The Qt Company Ltd.
+## Copyright (C) 2020 The Qt Company Ltd.
 ## Contact: https://www.qt.io/licensing/
 ##
 ## This file is part of the Boot to Qt meta layer.
@@ -27,5 +27,5 @@
 ##
 ############################################################################
 
-FILESEXTRAPATHS_prepend := "${THISDIR}/${PN}:"
-SRC_URI += "file://0001-arm-Fix-SIGBUS-on-ARM-when-compiled-with-binutils-2..patch"
+# Bump to later revision to support imx8
+SRCREV = "b3b93d3c78db7598b4fd43268c1f368ba2372f10"

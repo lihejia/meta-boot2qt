@@ -36,8 +36,6 @@ BBMASK += "\
     meta-toradex-nxp/recipes-graphics/xorg-xserver \
 "
 
-PREFERRED_VERSION_wayland-protocols_mx8 = "1.17.imx"
-
 WKS_FILE_DEPENDS_append_mx6 = " u-boot-script-toradex"
 WKS_FILE_DEPENDS_append_mx7 = " u-boot-script-toradex"
 
@@ -56,6 +54,9 @@ IMAGE_BOOT_FILES_append_mx7 += "${SCRIPTS}"
 # We don't use it as we override the tezi rootfs creation with our own version
 # but it causes a build failure if not defined
 TEZI_DATE = "20200101090000"
+
+# use u-boot-toradex-initial instead of u-boot-initial
+UBOOT_ENV_TEZI = "${@ 'u-boot-toradex-initial-env-%s' % d.getVar('UBOOT_CONFIG') if d.getVar('UBOOT_CONFIG') else 'u-boot-toradex-initial-env'}"
 
 QBSP_IMAGE_CONTENT += "\
     ${IMAGE_LINK_NAME}.tezi.tar \

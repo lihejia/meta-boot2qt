@@ -1,6 +1,6 @@
-############################################################################
+############################################################################                                                                                                                                                                                           [0/1958]
 ##
-## Copyright (C) 2018 The Qt Company Ltd.
+## Copyright (C) 2020 The Qt Company Ltd.
 ## Contact: https://www.qt.io/licensing/
 ##
 ## This file is part of the Boot to Qt meta layer.
@@ -27,22 +27,6 @@
 ##
 ############################################################################
 
-include conf/distro/include/toradex.inc
-
-DEPLOY_CONF_NAME = "Toradex Colibri iMX6ULL"
-
-IMAGE_BOOT_FILES += " \
-    u-boot-${MACHINE}.imx;${MACHINEDIR}/u-boot.imx \
-    "
-
-UBOOT_MAKE_TARGET = "u-boot.imx"
-
-DISTRO_FEATURES_remove = "webengine wayland vulkan"
-
-BOOT2QT_DEMOS_remove = "boot2qt-demo-mediaplayer boot2qt-demo-qtgraphicaleffects boot2qt-demo-qtwebbrowser"
-
-# try to limit the maximum size of the tezi image
-RDEPENDS_packagegroup-b2qt-embedded-base_remove_pn-packagegroup-b2qt-embedded-base = "linux-firmware"
-
-# remove support for 256MB version in tezi image, since image will be too large for it.
-TORADEX_PRODUCT_IDS_remove = "0036"
+# workaround for missing master branch causing
+# Exception: subprocess.CalledProcessError: Command '['git', 'log', '-1', '--pretty=%ct']' returned non-zero exit status 128.
+BUILD_REPRODUCIBLE_BINARIES = "0"
