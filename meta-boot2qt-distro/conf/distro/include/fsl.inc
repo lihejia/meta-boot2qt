@@ -41,6 +41,9 @@ QBSP_IMAGE_CONTENT += "\
     ${IMAGE_LINK_NAME}.info \
     "
 
+QBSP_LICENSE_FILE ?= "${FSL_EULA_FILE}"
+QBSP_LICENSE_NAME ?= "NXP Semiconductors Software License Agreement"
+
 # Use gstreamer 1.16 from meta-freescale
 PREFERRED_VERSION_gstreamer1.0_use-nxp-bsp ?= "1.16.imx"
 PREFERRED_VERSION_gstreamer1.0-plugins-base_use-nxp-bsp ?= "1.16.imx"
