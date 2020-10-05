@@ -27,24 +27,4 @@
 ##
 ############################################################################
 
-include conf/distro/include/fsl.inc
-
-# include file from meta-toradex-nxp
-include conf/machine/include/${MACHINE}.inc
-
-BBMASK += "\
-    meta-toradex-nxp/recipes-graphics/xorg-xserver \
-"
-
-PREFERRED_PROVIDER_virtual/dtb_use-nxp-bsp = "device-tree-overlays"
-
-QBSP_IMAGE_CONTENT += "\
-    ${IMAGE_LINK_NAME}.tezi.tar \
-"
-
-BBMASK += "\
-    meta-toradex-nxp/qt5-layer \
-    meta-toradex-nxp/recipes-graphics/imx-gpu-viv \
-    meta-toradex-nxp/recipes-bsp/imx-atf \
-    meta-toradex-bsp-common/recipes-kernel/linux-firmware \
-"
+RRECOMMENDS_${PN}_use-nxp-bsp = "libvulkan-imx"

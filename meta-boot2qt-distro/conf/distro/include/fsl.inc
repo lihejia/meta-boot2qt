@@ -33,6 +33,8 @@ BBMASK += "\
 
 IMAGE_FSTYPES += "wic"
 
+IMX_DEFAULT_BSP = "nxp"
+
 QBSP_IMAGE_CONTENT += "\
     ${IMAGE_LINK_NAME}.img \
     ${IMAGE_LINK_NAME}.conf \
