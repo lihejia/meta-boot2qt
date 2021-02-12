@@ -14,7 +14,7 @@ environment: &environment
   instructions:
     - type: EnvironmentVariable
       variableName: MACHINE
-      variableValue: jetson-tx2
+      variableValue: jetson-tx2-devkit
       enable_if:
         condition: property
         property: target.arch
