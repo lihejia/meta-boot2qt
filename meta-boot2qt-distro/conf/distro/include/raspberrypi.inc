@@ -29,7 +29,7 @@
 
 IMAGE_FSTYPES += "wic"
 
-QBSP_IMAGE_CONTENT ?= "\
+QBSP_IMAGE_CONTENT += "\
     ${IMAGE_LINK_NAME}.img \
     ${IMAGE_LINK_NAME}.conf \
     "
