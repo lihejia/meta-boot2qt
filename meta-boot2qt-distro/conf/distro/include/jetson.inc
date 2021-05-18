@@ -39,6 +39,7 @@ UBOOT_SUFFIX = "bin"
 QBSP_IMAGE_CONTENT += "\
     ${IMAGE_LINK_NAME}.img \
     ${IMAGE_LINK_NAME}.conf \
+    ${IMAGE_LINK_NAME}.info \
     ${IMAGE_LINK_NAME}.flasher.tar.gz \
     "
 
