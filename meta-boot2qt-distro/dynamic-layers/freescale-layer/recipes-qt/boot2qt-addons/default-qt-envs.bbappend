@@ -40,7 +40,7 @@ do_configure_append_mx6() {
 
 IMXCONVERTER ?= ""
 IMXCONVERTER_mx8 = "imxvideoconvert_g2d"
-IMXCONVERTER_mx8mm = ""
+IMXCONVERTER_mx8m = ""
 
 do_configure_append_mx8() {
     echo "QT_QPA_EGLFS_FORCE888=1" >> ${WORKDIR}/defaults
