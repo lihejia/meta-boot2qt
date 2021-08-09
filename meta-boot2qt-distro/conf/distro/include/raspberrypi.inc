@@ -1,6 +1,6 @@
 ############################################################################
 ##
-## Copyright (C) 2019 The Qt Company Ltd.
+## Copyright (C) 2021 The Qt Company Ltd.
 ## Contact: https://www.qt.io/licensing/
 ##
 ## This file is part of the Boot to Qt meta layer.
@@ -72,6 +72,7 @@ RPI_KERNEL_DEVICETREE_OVERLAYS = "\
     overlays/adv7282m.dtbo \
     overlays/adv728x-m.dtbo \
     overlays/akkordion-iqdacplus.dtbo \
+    overlays/allo-boss2-dac-audio.dtbo \
     overlays/allo-boss-dac-pcm512x-audio.dtbo \
     overlays/allo-digione.dtbo \
     overlays/allo-katana-dac-audio.dtbo \
@@ -99,6 +100,7 @@ RPI_KERNEL_DEVICETREE_OVERLAYS = "\
     overlays/draws.dtbo \
     overlays/dwc2.dtbo \
     overlays/dwc-otg.dtbo \
+    overlays/edt-ft5406.dtbo \
     overlays/enc28j60.dtbo \
     overlays/enc28j60-spi2.dtbo \
     overlays/exc3000.dtbo \
@@ -117,6 +119,7 @@ RPI_KERNEL_DEVICETREE_OVERLAYS = "\
     overlays/gpio-shutdown.dtbo \
     overlays/hd44780-lcd.dtbo \
     overlays/hdmi-backlight-hwhack-gpio.dtbo \
+    overlays/hifiberry-amp100.dtbo \
     overlays/hifiberry-amp.dtbo \
     overlays/hifiberry-dac.dtbo \
     overlays/hifiberry-dacplusadc.dtbo \
@@ -166,6 +169,7 @@ RPI_KERNEL_DEVICETREE_OVERLAYS = "\
     overlays/mcp23s17.dtbo \
     overlays/mcp2515-can0.dtbo \
     overlays/mcp2515-can1.dtbo \
+    overlays/mcp251xfd.dtbo \
     overlays/mcp3008.dtbo \
     overlays/mcp3202.dtbo \
     overlays/mcp342x.dtbo \
@@ -184,6 +188,10 @@ RPI_KERNEL_DEVICETREE_OVERLAYS = "\
     overlays/pca953x.dtbo \
     overlays/pibell.dtbo \
     overlays/pifacedigital.dtbo \
+    overlays/pifi-40.dtbo \
+    overlays/pifi-dac-hd.dtbo \
+    overlays/pifi-dac-zero.dtbo \
+    overlays/pifi-mini-210.dtbo \
     overlays/piglow.dtbo \
     overlays/piscreen2r.dtbo \
     overlays/piscreen.dtbo \
@@ -216,7 +224,8 @@ RPI_KERNEL_DEVICETREE_OVERLAYS = "\
     overlays/sc16is752-spi1.dtbo \
     overlays/sdhost.dtbo \
     overlays/sdio.dtbo \
-    overlays/sdtweak.dtbo \
+    overlays/seeed-can-fd-hat-v1.dtbo \
+    overlays/seeed-can-fd-hat-v2.dtbo \
     overlays/sh1106-spi.dtbo \
     overlays/smi-dev.dtbo \
     overlays/smi-nand.dtbo \
@@ -259,12 +268,15 @@ RPI_KERNEL_DEVICETREE_OVERLAYS = "\
     overlays/upstream.dtbo \
     overlays/upstream-pi4.dtbo \
     overlays/vc4-fkms-v3d.dtbo \
+    overlays/vc4-kms-dsi-7inch.dtbo \
     overlays/vc4-kms-kippah-7inch.dtbo \
     overlays/vc4-kms-v3d.dtbo \
     overlays/vc4-kms-v3d-pi4.dtbo \
+    overlays/vc4-kms-vga666.dtbo \
     overlays/vga666.dtbo \
     overlays/w1-gpio.dtbo \
     overlays/w1-gpio-pullup.dtbo \
     overlays/w5500.dtbo \
     overlays/wittypi.dtbo \
+    overlays/wm8960-soundcard.dtbo \
 "
