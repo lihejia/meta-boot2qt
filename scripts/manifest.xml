@@ -105,7 +105,7 @@
           fetch="git://github.com/boundarydevices"/>
   <project name="meta-boundary"
            remote="boundary"
-           revision="5e33c4b077a155ca858683b2e1f776694932f116"
+           revision="e21fc9dec890947c2644d62ec7af5d83cb8798d7"
            upstream="dunfell"
            path="sources/meta-boundary"/>
 </manifest>
