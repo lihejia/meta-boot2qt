@@ -37,6 +37,8 @@ SRC_URI += " \
         file://0001-ARM-fix-put_user-for-gcc-8.patch \
         "
 
+LINUX_VERSION = "4.1.29"
+
 do_configure_prepend() {
     echo "CONFIG_NAMESPACES=y"      >> ${B}/.config
     echo "CONFIG_FHANDLE=y"         >> ${B}/.config
