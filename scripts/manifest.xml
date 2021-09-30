@@ -5,7 +5,7 @@
           fetch="git://git.yoctoproject.org"/>
   <project name="poky"
            remote="yocto"
-           revision="2a848e95074318f3a243df7b3f40513a13173a82"
+           revision="74b22db6879b388d700f61e08cb3f239cf940d18"
            upstream="dunfell"
            path="sources/poky"/>
   <project name="meta-mingw"
@@ -75,7 +75,7 @@
           fetch="git://github.com/OE4T"/>
   <project name="meta-tegra"
            remote="OE4T"
-           revision="1968287b5e0cd154d4c17d6012769a9d8e8e774e"
+           revision="191195246862945d97e8dbaf5a9435adffd147e5"
            upstream="dunfell"
            path="sources/meta-tegra"/>
   <!-- internal layer for the nvidia devnet downloads -->
