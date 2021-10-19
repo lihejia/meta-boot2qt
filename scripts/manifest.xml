@@ -38,8 +38,8 @@
           fetch="ssh://codereview.qt-project.org/yocto"/>
   <project name="meta-qt6"
            remote="qt"
-           revision="9970f6c9dee83f8ad150fbacc0f937a9896d4568"
-           upstream="6.2"
+           revision="616105153e16f97f00d997b2fb481da6641da71f"
+           upstream="6.2.1"
            path="sources/meta-qt6"/>
 
   <!-- NXP -->
