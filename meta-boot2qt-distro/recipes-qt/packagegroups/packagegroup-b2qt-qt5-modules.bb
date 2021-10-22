@@ -43,6 +43,7 @@ RDEPENDS_${PN} += " \
     qtbase \
     qtcharts \
     qtconnectivity \
+    ${@bb.utils.contains('DISTRO_FEATURES', 'bluetooth', 'qtconnectivity-tools', '', d)} \
     qtdatavis3d \
     qtdeclarative \
     qtdeclarative-tools \
