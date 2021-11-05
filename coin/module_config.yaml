@@ -63,9 +63,6 @@ build_instructions:
         IdentityFile "/home/qt/.ssh/test_farm_id_rsa"
       EOF
 
-      sudo ln -sf gcc-7 /usr/bin/gcc
-      sudo ln -sf g++-7 /usr/bin/g++
-
       sudo mkdir -p /mnt/yocto-cache
       sudo mount yocto-cache.intra.qt.io:/srv/yocto-cache /mnt/yocto-cache
 
