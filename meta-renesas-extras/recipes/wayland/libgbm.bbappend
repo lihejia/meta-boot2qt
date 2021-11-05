@@ -1,6 +1,6 @@
 ############################################################################
 ##
-## Copyright (C) 2018 The Qt Company Ltd.
+## Copyright (C) 2021 The Qt Company Ltd.
 ## Contact: https://www.qt.io/licensing/
 ##
 ## This file is part of the Boot to Qt meta layer.
@@ -34,4 +34,4 @@ DEPENDS_append_draak = " udev"
 SRCREV = "a0c7d6c97fe1fffe45eee524060cbb12767c6461"
 SRCREV_draak = "bc04aefc9d5322f8b2dc1ecb15d0713bbab684b8"
 
-SRC_URI = "git://github.com/renesas-rcar/libgbm;branch=rcar-gen3"
+SRC_URI = "git://github.com/renesas-rcar/libgbm;branch=rcar-gen3;protocol=https"

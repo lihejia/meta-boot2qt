@@ -12,7 +12,7 @@ SRCBRANCH = "4.1-1.0.x-imx"
 SRCREV = "a543d1bd884028bed97c06ae4087e051a9176499"
 LOCALVERSION = "-${SRCBRANCH}-warp7"
 
-SRC_URI = "git://github.com/warp7/linux-fslc.git;branch=${SRCBRANCH} \
+SRC_URI = "git://github.com/warp7/linux-fslc.git;branch=${SRCBRANCH};protocol=https \
            file://defconfig"
 
 COMPATIBLE_MACHINE = "(imx7s-warp)"

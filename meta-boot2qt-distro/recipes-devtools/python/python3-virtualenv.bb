@@ -1,5 +1,5 @@
 SUMMARY = "Virtual Python Environment builder"
-HOMEPAGE = "http://github.com/gitpython-developers/GitPython"
+HOMEPAGE = "https://github.com/gitpython-developers/GitPython"
 SECTION = "devel/python"
 LICENSE = "BSD-3-Clause"
 LIC_FILES_CHKSUM = "file://LICENSE.txt;md5=51910050bd6ad04a50033f3e15d6ce43"
