@@ -85,6 +85,9 @@ build_instructions:
   - type: EnvironmentVariable
     variableName: DL_DIR
     variableValue: "/mnt/yocto-cache/downloads"
+  - type: EnvironmentVariable
+    variableName: SSL_CERT_DIR
+    variableValue: "/etc/ssl/certs"
   - type: ExecuteCommand
     command: ["{{.SourceDir}}/b2qt-init-build-env", "init", "--device", "{{.Env.MACHINE}}", "--reference", "/mnt/yocto-cache/mirror"]
     maxTimeInSeconds: 1800
