@@ -19,7 +19,7 @@
           fetch="git://git.openembedded.org"/>
   <project name="meta-openembedded"
            remote="oe"
-           revision="2e7e98cd0cb82db214b13224c71134b9335a719b"
+           revision="7889158dcd187546fc5e99fd81d0779cad3e8d17"
            upstream="dunfell"
            path="sources/meta-openembedded"/>
   <project name="meta-python2"
@@ -57,7 +57,7 @@
   <!-- Raspberry Pi -->
   <project name="meta-raspberrypi"
            remote="yocto"
-           revision="59c2d6f7a8b1239bd7b587b9180c2a55f9c695a2"
+           revision="2e704f5ef61e4efd4b691a2ed1cad7a59811c791"
            upstream="dunfell"
            path="sources/meta-raspberrypi"/>
 
@@ -66,7 +66,7 @@
           fetch="git://git.yoctoproject.org"/>
   <project name="meta-intel"
            remote="intel"
-           revision="edd749b55be6faf250fdeb5f160967f25a82bef3"
+           revision="625da85e7b01b71cc310267b0ba7119eb139e9f7"
            upstream="dunfell"
            path="sources/meta-intel"/>
 
@@ -75,7 +75,7 @@
           fetch="https://github.com/OE4T"/>
   <project name="meta-tegra"
            remote="OE4T"
-           revision="191195246862945d97e8dbaf5a9435adffd147e5"
+           revision="5443021f6908bcaa40880884e9225b0e21aefbac"
            upstream="dunfell"
            path="sources/meta-tegra"/>
   <!-- internal layer for the nvidia devnet downloads -->
@@ -92,12 +92,12 @@
           fetch="git://git.toradex.com"/>
   <project name="meta-toradex-bsp-common"
            remote="toradex"
-           revision="276a8e076225332b336e41eb2c62375ddc6989bf"
+           revision="789e231008c7fd1ca2b2535ea0ac1ee3c29f3233"
            upstream="dunfell-5.x.y"
            path="sources/meta-toradex-bsp-common"/>
   <project name="meta-toradex-nxp"
            remote="toradex"
-           revision="bc4b3704ab903506be7d1d2aa674aa8e5cd10037"
+           revision="c2de495bfbd1ce09f06e41ed0feb9f7041b8c65c"
            upstream="dunfell-5.x.y"
            path="sources/meta-toradex-nxp"/>
 
