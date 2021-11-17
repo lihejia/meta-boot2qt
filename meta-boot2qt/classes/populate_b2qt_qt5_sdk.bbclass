@@ -78,8 +78,8 @@ EOF
     echo "set(CMAKE_SYSROOT ${SDKTARGETSYSROOT})" > ${MACHINE_CMAKE}
     echo "set(CMAKE_PREFIX_PATH ${SDKTARGETSYSROOT}${OE_QMAKE_PATH_LIBS}/cmake)" >> ${MACHINE_CMAKE}
     echo "set(compiler_flags \"${TARGET_CC_ARCH}\")" >> ${MACHINE_CMAKE}
-    echo "set(CMAKE_C_COMPILER_ARG1 \"\${compiler_flags}\")" >> ${MACHINE_CMAKE}
-    echo "set(CMAKE_CXX_COMPILER_ARG1 \"\${compiler_flags}\")" >> ${MACHINE_CMAKE}
+    echo "set(CMAKE_C_FLAGS \"\${compiler_flags}\")" >> ${MACHINE_CMAKE}
+    echo "set(CMAKE_CXX_FLAGS \"\${compiler_flags}\")" >> ${MACHINE_CMAKE}
     echo "set(OE_QMAKE_PATH_EXTERNAL_HOST_BINS ${SDKPATHNATIVE}${OE_QMAKE_PATH_HOST_BINS})" >> ${MACHINE_CMAKE}
 }
 
