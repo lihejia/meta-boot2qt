@@ -37,6 +37,7 @@ PACKAGECONFIG += "openssl gui imageformats"
 PACKAGECONFIG_remove_mingw32 += "openssl"
 
 fakeroot do_generate_qt_environment_file_mingw32() {
+    :
 }
 
 # qdatetime.cpp: error: 'localtime_r' was not declared in this scope
