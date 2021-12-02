@@ -1,6 +1,6 @@
 ############################################################################
 ##
-## Copyright (C) 2020 The Qt Company Ltd.
+## Copyright (C) 2021 The Qt Company Ltd.
 ## Contact: https://www.qt.io/licensing/
 ##
 ## This file is part of the Boot to Qt meta layer.
@@ -35,7 +35,7 @@ inherit qt5-module
 require recipes-qt/qt5/qt5-git.inc
 QT_MODULE_BRANCH = "5.15"
 
-SRCREV = "714e5dadf2d6064aaddd7d4e0abd55af332b9448"
+SRCREV = "5b82e73eb74061c403521c8c75aa11754faad5a2"
 
 DEPENDS = "\
     qtbase qtdeclarative qtconnectivity qtdeclarative-native \
