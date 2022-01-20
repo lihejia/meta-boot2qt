@@ -52,6 +52,7 @@ RDEPENDS_${PN} += " \
     qtgraphicaleffects \
     qtimageformats \
     qtlocation \
+    qtlottie \
     qtmultimedia \
     qtnetworkauth \
     qtotaupdate \
