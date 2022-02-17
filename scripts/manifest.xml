@@ -57,7 +57,7 @@
   <!-- Raspberry Pi -->
   <project name="meta-raspberrypi"
            remote="yocto"
-           revision="2e704f5ef61e4efd4b691a2ed1cad7a59811c791"
+           revision="934064a01903b2ba9a82be93b3f0efdb4543a0e8"
            upstream="dunfell"
            path="sources/meta-raspberrypi"/>
 
@@ -66,7 +66,7 @@
           fetch="git://git.yoctoproject.org"/>
   <project name="meta-intel"
            remote="intel"
-           revision="625da85e7b01b71cc310267b0ba7119eb139e9f7"
+           revision="8eec569734cb1ff9c0905f4a88f9b4bfc89ed9fc"
            upstream="dunfell"
            path="sources/meta-intel"/>
 
