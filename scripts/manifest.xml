@@ -45,12 +45,12 @@
           fetch="https://github.com/Freescale"/>
   <project name="meta-freescale"
            remote="freescale"
-           revision="727fd8df20c8ee58474ce15cd5e1459f14bee977"
+           revision="6d2922bee372157454e422df518b6cf0bfcf6700"
            upstream="dunfell"
            path="sources/meta-freescale"/>
   <project name="meta-freescale-3rdparty"
            remote="freescale"
-           revision="537cb85e4db17d1f6b356a92112b32ae2e39b235"
+           revision="89fa5f6fd276b0e6ba6eb8cf41f51e12f3d8b5c1"
            upstream="dunfell"
            path="sources/meta-freescale-3rdparty"/>
 
@@ -92,12 +92,12 @@
           fetch="git://git.toradex.com"/>
   <project name="meta-toradex-bsp-common"
            remote="toradex"
-           revision="789e231008c7fd1ca2b2535ea0ac1ee3c29f3233"
+           revision="4b876a0ecbe04eb924abf2442249c2cae3231d21"
            upstream="dunfell-5.x.y"
            path="sources/meta-toradex-bsp-common"/>
   <project name="meta-toradex-nxp"
            remote="toradex"
-           revision="c2de495bfbd1ce09f06e41ed0feb9f7041b8c65c"
+           revision="4d9bf383a656759a574b3d82cb8b90b0e2663e50"
            upstream="dunfell-5.x.y"
            path="sources/meta-toradex-nxp"/>
 
