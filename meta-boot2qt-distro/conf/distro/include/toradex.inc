@@ -36,6 +36,10 @@ BBMASK += "\
     meta-toradex-nxp/recipes-graphics/xorg-xserver \
 "
 
+# Keep including backports from meta-toradex-nxp layer. Without the
+# override, they are omitted since "5.6.0" release
+DISTROOVERRIDES .= ":tdx"
+
 PREFERRED_PROVIDER_virtual/dtb_use-nxp-bsp = "device-tree-overlays"
 
 QBSP_IMAGE_CONTENT += "\
