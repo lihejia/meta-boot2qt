@@ -45,7 +45,7 @@
           fetch="https://github.com/Freescale"/>
   <project name="meta-freescale"
            remote="freescale"
-           revision="3158e7f2b505074dec80307ad3db7e9d51b08fab"
+           revision="470da01b34b538d8b2a9bf9da512b89f4f76c7f9"
            upstream="hardknott"
            path="sources/meta-freescale"/>
   <project name="meta-freescale-3rdparty"
@@ -66,7 +66,7 @@
           fetch="git://git.yoctoproject.org"/>
   <project name="meta-intel"
            remote="intel"
-           revision="4d5791d9ff515ba1660234b1987eae4d4e90eeca"
+           revision="16bfef2d1e0d0c8c596741d0bbb820541c432f6d"
            upstream="hardknott"
            path="sources/meta-intel"/>
 
@@ -75,7 +75,7 @@
           fetch="https://github.com/OE4T"/>
   <project name="meta-tegra"
            remote="OE4T"
-           revision="7992b966e17d4d5084e209013a7c115a8486e7ec"
+           revision="d059450b8e19bb9f064cbbf262e00aaa501d0b02"
            upstream="hardknott"
            path="sources/meta-tegra"/>
 
