@@ -61,7 +61,7 @@
           fetch="git://git.yoctoproject.org"/>
   <project name="meta-intel"
            remote="intel"
-           revision="fca80fae34f06c42405e45c3895e6958a7a176e0"
+           revision="daf5c125a744d45d8fa395b576147edd5a714f5c"
            upstream="honister"
            path="sources/meta-intel"/>
 
@@ -70,7 +70,7 @@
           fetch="https://github.com/OE4T"/>
   <project name="meta-tegra"
            remote="OE4T"
-           revision="e28a08d63c66563cc41ba57d0bb58b6be2c5d32c"
+           revision="b2481c12ae0468c85b76332faa2922682245e185"
            upstream="honister"
            path="sources/meta-tegra"/>
 
