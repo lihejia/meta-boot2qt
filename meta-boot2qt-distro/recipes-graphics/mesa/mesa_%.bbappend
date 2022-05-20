@@ -1,6 +1,6 @@
 ############################################################################
 ##
-## Copyright (C) 2021 The Qt Company Ltd.
+## Copyright (C) 2022 The Qt Company Ltd.
 ## Contact: https://www.qt.io/licensing/
 ##
 ## This file is part of the Boot to Qt meta layer.
@@ -26,8 +26,5 @@
 ## $QT_END_LICENSE$
 ##
 ############################################################################
-FILESEXTRAPATHS:prepend := "${THISDIR}/${PN}:"
 
-SRC_URI += "\
-    file://0001-Fix-multiple-definition-of-default_nvbuf_api_version.patch \
-"
+RDEPENDS:libgles2-mesa-dev += "libgles3-mesa-dev"

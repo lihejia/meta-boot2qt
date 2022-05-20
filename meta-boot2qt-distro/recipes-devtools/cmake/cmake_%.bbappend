@@ -27,8 +27,7 @@
 ##
 ############################################################################
 
-FILESEXTRAPATHS:prepend:mingw32 := "${THISDIR}/${PN}:"
-SRC_URI:append:mingw32 = " file://0001-Makefile-fix-build-for-mingw.patch"
-OS:mingw32 = "Windows"
-export OS
-FILES:${PN}:append:mingw32 = " ${libdir}/*.dll"
+FILESEXTRAPATHS:append:mingw32 := "${THISDIR}/${PN}:"
+SRC_URI:append:mingw32 = " \
+    file://0001-Fix-build-for-mingw32.patch \
+"

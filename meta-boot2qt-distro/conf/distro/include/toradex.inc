@@ -42,19 +42,11 @@ QBSP_IMAGE_CONTENT += "\
 
 BBMASK += "\
     meta-toradex-nxp/backports \
+    meta-toradex-nxp/recipes-bsp/u-boot/u-boot-tools_%.bbappend \
 "
 
 # Use Toradex defined names
 DEPLOY_CONF_NAME = "Toradex ${MACHINE_NAME}"
-
-ATF_PLATFORM:mx8qm = "imx8qm"
-ATF_PLATFORM:mx8x = "imx8qx"
-ATF_PLATFORM:mx8mm = "imx8mm"
-ATF_PLATFORM:mx8mp = "imx8mp"
-IMX_BOOT_SOC_TARGET:mx8qm = "iMX8QM"
-IMX_BOOT_SOC_TARGET:mx8x = "iMX8QX"
-IMX_BOOT_SOC_TARGET:mx8mm = "iMX8MM"
-IMX_BOOT_SOC_TARGET:mx8mp = "iMX8MP"
 
 GPULESS_FEATURES = "wayland opengl vulkan webengine"
 GPULESS_FEATURES:imxgpu = ""
@@ -73,3 +65,9 @@ DRI_DEVICE:verdin-imx8mp = "card0"
 
 # remove support for 256MB version colibri-imx6ull in tezi image, since image will be too large for it.
 TORADEX_PRODUCT_IDS:remove:colibri-imx6ull = "0036"
+
+# fix u-boot build
+UBOOT_SUFFIX:colibri-imx6ull = "img"
+
+# fix tezi build
+TAR_IMAGE_ROOTFS:task-image-bootfs = "${WORKDIR}/bootfs"
