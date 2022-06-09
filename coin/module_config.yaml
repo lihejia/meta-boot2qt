@@ -7,7 +7,7 @@ accept_configuration:
       equals_value: Yocto
     - condition: property
       property: target.arch
-      in_values: [TARGET1, TARGET2, TARGET3, TARGET4, TARGET5]
+      in_values: [TARGET1, TARGET2, TARGET3, TARGET4, TARGET5, TARGET6, TARGET7]
 
 machine_type:
     Build:
@@ -51,6 +51,20 @@ environment: &environment
         condition: property
         property: target.arch
         equals_value: TARGET5
+    - type: EnvironmentVariable
+      variableName: MACHINE
+      variableValue: raspberrypi4-64
+      enable_if:
+        condition: property
+        property: target.arch
+        equals_value: TARGET6
+    - type: EnvironmentVariable
+      variableName: MACHINE
+      variableValue: intel-skylake-64
+      enable_if:
+        condition: property
+        property: target.arch
+        equals_value: TARGET7
 
 build_instructions:
   - *environment
