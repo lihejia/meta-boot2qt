@@ -317,4 +317,4 @@ RPI_KERNEL_DEVICETREE_OVERLAYS = "\
     overlays/w5500.dtbo \
     overlays/wittypi.dtbo \
     overlays/wm8960-soundcard.dtbo \
-#
+"
