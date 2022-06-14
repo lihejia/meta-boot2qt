@@ -22,11 +22,6 @@
            revision="0b78362654262145415df8211052442823b9ec9b"
            upstream="kirkstone"
            path="sources/meta-openembedded"/>
-  <project name="meta-python2"
-           remote="oe"
-           revision="f02882e2aa9279ca7becca8d0cedbffe88b5a253"
-           upsream="kirkstone"
-           path="sources/meta-python2"/>
 
   <!-- Qt -->
   <remote name="qt"
