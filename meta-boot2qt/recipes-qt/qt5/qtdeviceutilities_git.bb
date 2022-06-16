@@ -35,7 +35,7 @@ inherit qt5-module
 require recipes-qt/qt5/qt5-git.inc
 QT_MODULE_BRANCH = "5.15"
 
-SRCREV = "5bcfd28a57878bd7e193b38886950974acf706c1"
+SRCREV = "e39942af454adc97ea010473b21bc994e27a4d6b"
 
 DEPENDS = "\
     qtbase qtdeclarative qtconnectivity qtdeclarative-native \
