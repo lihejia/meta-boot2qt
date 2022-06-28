@@ -28,4 +28,4 @@
 ############################################################################
 
 MACHINE_EXTRA_INSTALL_SDK += "libnss-mdns"
-MACHINE_EXTRA_INSTALL_SDK += "libdrm fontconfig pixman openssl pango cairo pciutils nss libcap"
+MACHINE_EXTRA_INSTALL_SDK_HOST += "nativesdk-python3-html5lib"
