@@ -33,6 +33,7 @@ do_image_conf[depends] += "qtbase-native:do_populate_sysroot"
 
 DEPLOY_CONF_NAME ?= "${MACHINE}"
 DEPLOY_CONF_TYPE ?= "Boot2Qt"
+DEPLOY_CONF_IMAGE_TYPE ?= "img"
 
 IMAGE_CMD_conf() {
     QT_VERSION=$(qmake -query QT_VERSION)
@@ -42,7 +43,7 @@ platform=${MACHINE}
 product=${DEPLOY_CONF_TYPE}
 qt=Qt $QT_VERSION
 os=linux
-imagefile=${IMAGE_LINK_NAME}.img
+imagefile=${IMAGE_LINK_NAME}.${DEPLOY_CONF_IMAGE_TYPE}
 asroot=true
 EOF
 }
