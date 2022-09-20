@@ -1,6 +1,6 @@
 /****************************************************************************
 **
-** Copyright (C) 2018 The Qt Company Ltd.
+** Copyright (C) 2022 The Qt Company Ltd.
 ** Contact: https://www.qt.io/licensing/
 **
 ** This file is part of the Boot to Qt meta layer.
@@ -27,32 +27,23 @@
 **
 ****************************************************************************/
 
-var targetHost = "Linux";
-var currentHost = "Linux";
-
 function Component()
 {
-    if ("@SDKFILE@".indexOf("mingw32") >= 0)
-        targetHost = "Windows";
-
-    if (systemInfo.kernelType === "winnt")
-        currentHost = "Windows";
-    else if (systemInfo.kernelType === "darwin")
-        currentHost = "macOS";
-
-    if (currentHost != targetHost) {
+    if ("@TOOLCHAIN_HOST_TYPE@" == "windows" && systemInfo.kernelType !== "winnt") {
         component.enabled = false;
         component.setValue("Default", false);
-        installer.componentByName(component.name + ".toolchain").setValue("Default", false);
-        installer.componentByName(component.name + ".toolchain").enabled = false;
-        installer.componentByName(component.name + ".system").setValue("Default", false);
-        installer.componentByName(component.name + ".system").enabled = false;
 
-        gui.currentPageWidget().completeChanged.connect(this, Component.prototype.completeChanged)
+        var toolchain = installer.componentByName(component.name + ".toolchain")
+        if (toolchain) {
+            toolchain.setValue("Default", false);
+            toolchain.enabled = false;
+        }
+        var system = installer.componentByName(component.name + ".system")
+        if (system) {
+            system.setValue("Default", false);
+            system.enabled = false;
+        }
+
+        QMessageBox.critical("error", "Invalid QBSP package", "The selected QBSP supports only Windows host platform.\nPlease restart the installer before continuing.");
     }
-}
-
-Component.prototype.completeChanged = function ()
-{
-    QMessageBox.critical("error", "Invalid QBSP package", "The selected QBSP supports only " + targetHost + " host platform.\nPlease restart the installer before continuing.");
 }
