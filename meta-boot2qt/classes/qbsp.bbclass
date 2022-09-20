@@ -1,6 +1,6 @@
 ############################################################################
 ##
-## Copyright (C) 2021 The Qt Company Ltd.
+## Copyright (C) 2022 The Qt Company Ltd.
 ## Contact: https://www.qt.io/licensing/
 ##
 ## This file is part of the Boot to Qt meta layer.
@@ -44,8 +44,8 @@ INHIBIT_DEFAULT_DEPS = "1"
 do_qbsp[depends] += "\
     p7zip-native:do_populate_sysroot \
     installer-framework-native:do_populate_sysroot \
-    ${QBSP_SDK_TASK}:do_populate_sdk \
-    ${QBSP_IMAGE_TASK}:do_image_complete \
+    ${@d.getVar('QBSP_SDK_TASK', True) + ':do_populate_sdk' if d.getVar('QBSP_SDK_TASK', True) else ''}  \
+    ${@d.getVar('QBSP_IMAGE_TASK', True) + ':do_image_complete' if d.getVar('QBSP_IMAGE_TASK', True) else ''}  \
     "
 
 QBSP_VERSION ?= "${PV}${VERSION_AUTO_INCREMENT}"
@@ -54,6 +54,12 @@ QBSP_INSTALL_PATH ?= "/Extras/${MACHINE}"
 
 QBSP_LICENSE_FILE ??= ""
 QBSP_LICENSE_NAME ??= ""
+
+QBSP_FORCE_CONTAINER_TOOLCHAIN ?= "false"
+QBSP_FORCE_CONTAINER_TOOLCHAIN:sdkmingw32 = "false"
+
+TOOLCHAIN_HOST_TYPE = "linux"
+TOOLCHAIN_HOST_TYPE:sdkmingw32 = "windows"
 
 VERSION_AUTO_INCREMENT = "-${DATETIME}"
 VERSION_AUTO_INCREMENT[vardepsexclude] = "DATETIME"
@@ -78,7 +84,7 @@ patch_installer_files() {
 
     sed -e "s#@NAME@#${QBSP_NAME}#" \
         -e "s#@TARGET@#${DEPLOY_CONF_NAME}#" \
-        -e "s#@VERSION@#${QBSP_VERSION}#" \
+        -e "s#@QBSP_VERSION@#${QBSP_VERSION}#" \
         -e "s#@RELEASEDATE@#${RELEASEDATE}#" \
         -e "s#@MACHINE@#${MACHINE}#" \
         -e "s#@SYSROOT@#${REAL_MULTIMACH_TARGET_SYS}#" \
@@ -92,23 +98,29 @@ patch_installer_files() {
         -e "s#@LICENSEFILE@#$(basename ${QBSP_LICENSE_FILE})#" \
         -e "s#@LICENSENAME@#${QBSP_LICENSE_NAME}#" \
         -e "s#@TOOLCHAIN_HOST_SYSROOT@#${SDK_SYS}#" \
+        -e "s#@FORCE_CONTAINER_TOOLCHAIN@#${QBSP_FORCE_CONTAINER_TOOLCHAIN}#" \
+        -e "s#@TOOLCHAIN_HOST_TYPE@#${TOOLCHAIN_HOST_TYPE}#" \
+        -e "s#@DOCKER_ARCH@#${@'arm64' if d.getVar('SDKMACHINE') == 'aarch64' else 'amd64'}#" \
+        -e "s#@VERSION@#${PV}#" \
         -i ${1}/*
 }
 
 prepare_qbsp() {
     # Toolchain component
-    COMPONENT_PATH="${B}/pkg/${QBSP_INSTALLER_COMPONENT}.toolchain"
-    mkdir -p ${COMPONENT_PATH}/meta
-    mkdir -p ${COMPONENT_PATH}/data
+    if [ -e ${DEPLOY_DIR}/sdk/${SDK_NAME} ]; then
+        COMPONENT_PATH="${B}/pkg/${QBSP_INSTALLER_COMPONENT}.toolchain"
+        mkdir -p ${COMPONENT_PATH}/meta
+        mkdir -p ${COMPONENT_PATH}/data
 
-    cp ${WORKDIR}/toolchain_package.xml ${COMPONENT_PATH}/meta/package.xml
-    cp ${WORKDIR}/toolchain_installscript.qs ${COMPONENT_PATH}/meta/installscript.qs
-    patch_installer_files ${COMPONENT_PATH}/meta
+        cp ${WORKDIR}/toolchain_package.xml ${COMPONENT_PATH}/meta/package.xml
+        cp ${WORKDIR}/toolchain_installscript.qs ${COMPONENT_PATH}/meta/installscript.qs
+        patch_installer_files ${COMPONENT_PATH}/meta
 
-    if [ "${SDK_POSTFIX}" = "${SDK_POSTFIX:sdkmingw32}" ]; then
-        cp ${DEPLOY_DIR}/sdk/${SDK_NAME} ${COMPONENT_PATH}/data/toolchain.${SDK_POSTFIX}
-    else
-        7za a -mx=0 ${COMPONENT_PATH}/data/toolchain.7z ${DEPLOY_DIR}/sdk/${SDK_NAME}
+        if [ "${SDK_POSTFIX}" = "${SDK_POSTFIX:sdkmingw32}" ]; then
+            cp ${DEPLOY_DIR}/sdk/${SDK_NAME} ${COMPONENT_PATH}/data/toolchain.${SDK_POSTFIX}
+        else
+            7za a -mx=0 ${COMPONENT_PATH}/data/toolchain.7z ${DEPLOY_DIR}/sdk/${SDK_NAME}
+        fi
     fi
 
     # Image component, only if we have the qbsp-image

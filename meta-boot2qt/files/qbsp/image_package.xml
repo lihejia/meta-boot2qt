@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <Package>
-  <Version>@VERSION@</Version>
+  <Version>@QBSP_VERSION@</Version>
   <ReleaseDate>@RELEASEDATE@</ReleaseDate>
   <DisplayName>@TARGET@ Linux System</DisplayName>
   <Description>System image for @TARGET@ hardware</Description>
