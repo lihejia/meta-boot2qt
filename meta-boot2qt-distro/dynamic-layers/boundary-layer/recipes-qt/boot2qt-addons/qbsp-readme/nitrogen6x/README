@@ -1,5 +1,5 @@
 To successfully set up the Boot to Qt software stack,
-follow the instructions in https://doc.qt.io/QtForDeviceCreation/qtdc-qbsp-installation-guide.html#.
+follow the instructions in https://doc.qt.io/Boot2Qt/b2qt-qbsp-installation-guide.html#.
 
 In Boundary Devices i.MX6 Board target devices, see also the U-Boot and
 Nitrogen6_Lite device specific instructions:
