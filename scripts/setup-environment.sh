@@ -84,7 +84,7 @@ if [ ! -e ${PWD}/${BUILDDIRECTORY} ]; then
   mkdir -p ${PWD}/${BUILDDIRECTORY}/conf
   cp ${LAYERSCONF} ${PWD}/${BUILDDIRECTORY}/conf/bblayers.conf
   if [ ! -e "${PWD}/sources/templates/local.conf.sample" ]; then
-    cp ${PWD}/sources/meta-boot2qt/meta-boot2qt-distro/conf/local.conf.sample  ${PWD}/${BUILDDIRECTORY}/conf/local.conf
+    cp ${PWD}/sources/meta-boot2qt/meta-boot2qt-distro/conf/templates/default/local.conf.sample  ${PWD}/${BUILDDIRECTORY}/conf/local.conf
   fi
 
   if [ -e ${PWD}/sources/meta-boot2qt/.QT-FOR-DEVICE-CREATION-LICENSE-AGREEMENT ]; then
@@ -92,7 +92,7 @@ if [ ! -e ${PWD}/${BUILDDIRECTORY} ]; then
   fi
 fi
 
-export TEMPLATECONF="${PWD}/sources/templates"
+export TEMPLATECONF=$(readlink -f "${PWD}/sources/templates")
 . sources/poky/oe-init-build-env ${BUILDDIRECTORY}
 
 # use sources from Qt SDK if that is available

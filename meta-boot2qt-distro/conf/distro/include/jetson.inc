@@ -39,8 +39,6 @@ UBOOT_SUFFIX = "bin"
 IMAGE_FSTYPES += "wic.xz"
 WKS_FILE = "tegra-bootdisk.wks.in"
 
-DEPLOY_CONF_NAME:jetson-tx1-devkit = "NVIDIA Jetson TX1 Development Kit"
-DEPLOY_CONF_NAME:jetson-tx2-devkit = "NVIDIA Jetson TX2 Development Kit"
 DEPLOY_CONF_NAME:jetson-agx-xavier-devkit = "NVIDIA Jetson AGX Xavier Development Kit"
 
 DEPLOY_CONF_IMAGE_TYPE = "wic.xz"
@@ -64,9 +62,3 @@ module_conf_tegra-udrm = ""
 
 NVIDIA_DEVNET_MIRROR ?= "file://${BSPDIR}/sources/nvidia-devnet-mirror"
 NVIDIA_DEVNET_MIRROR[vardepsexclude] = "BSPDIR"
-
-# cboot-t18x fails to build with:
-# multiple definition of `sdmmc_context_t'
-PREFERRED_PROVIDER_cboot = "cboot-prebuilt"
-
-require conf/include/gstreamer-1.14.conf

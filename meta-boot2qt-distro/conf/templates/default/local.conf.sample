@@ -326,6 +326,7 @@ INHERIT += "internal-build"
 
 ACCEPT_FSL_EULA = "1"
 LICENSE_FLAGS_ACCEPTED = "commercial"
+LICENSE_FLAGS_ACCEPTED:append:rpi = " synaptics-killswitch"
 
 # Path to the Qt online SDK installation, used for sources that are available only from
 # the online installer.

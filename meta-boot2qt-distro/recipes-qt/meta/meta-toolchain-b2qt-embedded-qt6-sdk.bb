@@ -42,3 +42,6 @@ TOOLCHAIN_TARGET_TASK += "\
 
 PACKAGE_EXCLUDE_COMPLEMENTARY += "qtwebengine-dbg"
 PACKAGE_EXCLUDE += "sudo"
+
+# For static libs of target SDK
+SDKIMAGE_FEATURES:append = " staticdev-pkgs"

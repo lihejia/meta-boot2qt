@@ -125,7 +125,7 @@ init() {
     ln -s ${DIR}/scripts/setup-environment.sh setup-environment.sh
   fi
 
-  ln -sfn meta-boot2qt/meta-boot2qt-distro/conf sources/templates
+  ln -sfn meta-boot2qt/meta-boot2qt-distro/conf/templates/default sources/templates
 
   # handle lfs repos which need manual lfs pull
   LFS_REPOS=$(grep filter=lfs -l sources/*/.gitattributes 2>/dev/null || true)

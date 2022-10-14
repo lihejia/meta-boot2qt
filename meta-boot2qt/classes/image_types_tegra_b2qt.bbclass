@@ -27,21 +27,6 @@
 ##
 ############################################################################
 
-# create flash package that utilizes the SD card image
-tegraflash_custom_post:tegra186() {
-    cat > prepare-image.sh <<END
-#!/bin/sh -e
-if [ ! -e "${IMAGE_BASENAME}.img" ]; then
-    xz -dc ../${IMAGE_LINK_NAME}.wic.xz | dd of=${IMAGE_LINK_NAME}.${IMAGE_TEGRAFLASH_FS_TYPE} iflag=fullblock skip=1 bs=$(expr ${IMAGE_ROOTFS_ALIGNMENT} \* 1024) count=$(expr ${ROOTFS_SIZE} / 1024)
-    ./mksparse -v --fillpattern=0 ${IMAGE_LINK_NAME}.${IMAGE_TEGRAFLASH_FS_TYPE} ${IMAGE_BASENAME}.img
-    rm -f ${IMAGE_LINK_NAME}.${IMAGE_TEGRAFLASH_FS_TYPE}
-fi
-echo "Flash image ready"
-END
-    chmod +x prepare-image.sh
-    rm ${IMAGE_BASENAME}.img
-}
-
 tegraflash_custom_post() {
     cat > prepare-image.sh <<END
 #!/bin/sh -e

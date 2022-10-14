@@ -1,6 +1,6 @@
 ############################################################################
 ##
-## Copyright (C) 2020 The Qt Company Ltd.
+## Copyright (C) 2021 The Qt Company Ltd.
 ## Contact: https://www.qt.io/licensing/
 ##
 ## This file is part of the Boot to Qt meta layer.
@@ -26,8 +26,26 @@
 ## $QT_END_LICENSE$
 ##
 ############################################################################
-FILESEXTRAPATHS:prepend := "${THISDIR}/${PN}:"
 
-SRC_URI += "\
-    file://0001-perf-bench-Share-some-global-variables-to-fix-build-.patch \
-"
+# POKY_BBLAYERS_CONF_VERSION is increased each time build/conf/bblayers.conf
+# changes incompatibly
+POKY_BBLAYERS_CONF_VERSION = "2"
+
+BBPATH = "${TOPDIR}"
+BBFILES ?= ""
+BSPDIR := "${@os.path.abspath(os.path.dirname(d.getVar('FILE')) + '/../..')}"
+
+BBLAYERS ?= " \
+  ${BSPDIR}/sources/poky/meta \
+  ${BSPDIR}/sources/poky/meta-poky \
+  ${BSPDIR}/sources/meta-tegra \
+  ${BSPDIR}/sources/meta-openembedded/meta-oe \
+  ${BSPDIR}/sources/meta-openembedded/meta-python \
+  ${BSPDIR}/sources/meta-openembedded/meta-networking \
+  ${BSPDIR}/sources/meta-openembedded/meta-initramfs \
+  ${BSPDIR}/sources/meta-openembedded/meta-multimedia \
+  ${BSPDIR}/sources/meta-boot2qt/meta-boot2qt \
+  ${BSPDIR}/sources/meta-boot2qt/meta-boot2qt-distro \
+  ${BSPDIR}/sources/meta-mingw \
+  ${BSPDIR}/sources/meta-qt6 \
+  "

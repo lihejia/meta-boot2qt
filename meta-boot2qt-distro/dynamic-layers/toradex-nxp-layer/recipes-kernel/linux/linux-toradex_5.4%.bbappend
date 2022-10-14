@@ -1,6 +1,6 @@
 ############################################################################
 ##
-## Copyright (C) 2021 The Qt Company Ltd.
+## Copyright (C) 2022 The Qt Company Ltd.
 ## Contact: https://www.qt.io/licensing/
 ##
 ## This file is part of the Boot to Qt meta layer.
@@ -27,4 +27,8 @@
 ##
 ############################################################################
 
-LTTNGTOOLS = ""
+FILESEXTRAPATHS:prepend := "${THISDIR}/${PN}:"
+
+SRC_URI:append = "\
+    file://0001-Fix-API-break-in-init_disassemble_info.patch \
+"

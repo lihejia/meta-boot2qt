@@ -1,6 +1,6 @@
 ############################################################################
 ##
-## Copyright (C) 2020 The Qt Company Ltd.
+## Copyright (C) 2022 The Qt Company Ltd.
 ## Contact: https://www.qt.io/licensing/
 ##
 ## This file is part of the Boot to Qt meta layer.
@@ -27,7 +27,7 @@
 ##
 ############################################################################
 
-FILESEXTRAPATHS:append := "${THISDIR}/${PN}:"
+FILESEXTRAPATHS:prepend := "${THISDIR}/${PN}:"
 SRC_URI += " \
-    file://0001-linux-user-add-support-for-MADV_DONTNEED.patch \
-"
+    file://0001-LLD-fix-detection-and-remove-not-needed-workarounds.patch \
+    "

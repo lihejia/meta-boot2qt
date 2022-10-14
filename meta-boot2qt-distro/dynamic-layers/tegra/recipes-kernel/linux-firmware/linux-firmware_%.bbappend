@@ -1,6 +1,6 @@
 ############################################################################
 ##
-## Copyright (C) 2019 The Qt Company Ltd.
+## Copyright (C) 2022 The Qt Company Ltd.
 ## Contact: https://www.qt.io/licensing/
 ##
 ## This file is part of the Boot to Qt meta layer.
@@ -27,7 +27,9 @@
 ##
 ############################################################################
 
-FILESEXTRAPATHS:prepend := "${THISDIR}/${PN}:"
-SRC_URI += "\
-    file://init-boot.sh \
-    "
+# linux-firmware and tegra-firmware have these same files so
+# remove an old version to make package-ipk and package-rpm success
+do_install:append:tegra194() {
+    rm -f ${D}${nonarch_base_libdir}/firmware/nvidia/tegra194/vic.bin
+    rm -f ${D}${nonarch_base_libdir}/firmware/nvidia/tegra194/xusb.bin
+}

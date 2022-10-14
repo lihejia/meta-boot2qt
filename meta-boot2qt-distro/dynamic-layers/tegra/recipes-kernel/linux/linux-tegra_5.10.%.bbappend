@@ -1,6 +1,6 @@
 ############################################################################
 ##
-## Copyright (C) 2021 The Qt Company Ltd.
+## Copyright (C) 2022 The Qt Company Ltd.
 ## Contact: https://www.qt.io/licensing/
 ##
 ## This file is part of the Boot to Qt meta layer.
@@ -27,26 +27,9 @@
 ##
 ############################################################################
 
-# POKY_BBLAYERS_CONF_VERSION is increased each time build/conf/bblayers.conf
-# changes incompatibly
-POKY_BBLAYERS_CONF_VERSION = "2"
+FILESEXTRAPATHS:prepend := "${THISDIR}/${PN}:"
 
-BBPATH = "${TOPDIR}"
-BBFILES ?= ""
-BSPDIR := "${@os.path.abspath(os.path.dirname(d.getVar('FILE')) + '/../..')}"
-
-BBLAYERS ?= " \
-  ${BSPDIR}/sources/poky/meta \
-  ${BSPDIR}/sources/poky/meta-poky \
-  ${BSPDIR}/sources/meta-tegra \
-  ${BSPDIR}/sources/meta-tegra/contrib \
-  ${BSPDIR}/sources/meta-openembedded/meta-oe \
-  ${BSPDIR}/sources/meta-openembedded/meta-python \
-  ${BSPDIR}/sources/meta-openembedded/meta-networking \
-  ${BSPDIR}/sources/meta-openembedded/meta-initramfs \
-  ${BSPDIR}/sources/meta-openembedded/meta-multimedia \
-  ${BSPDIR}/sources/meta-boot2qt/meta-boot2qt \
-  ${BSPDIR}/sources/meta-boot2qt/meta-boot2qt-distro \
-  ${BSPDIR}/sources/meta-mingw \
-  ${BSPDIR}/sources/meta-qt6 \
-  "
+SRC_URI:append = "\
+    file://0001-Fix-API-break-in-init_disassemble_info.patch \
+    file://enable-kprobes-for-lttng.cfg \
+"

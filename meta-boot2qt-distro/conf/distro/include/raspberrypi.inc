@@ -75,8 +75,8 @@ MACHINE_GSTREAMER_1_0_PLUGIN += "gstreamer1.0-omx"
 RPI_KERNEL_DEVICETREE_OVERLAYS = "\
     overlays/overlay_map.dtb \
     overlays/act-led.dtbo \
-    overlays/adafruit-st7735r.dtbo \
     overlays/adafruit18.dtbo \
+    overlays/adafruit-st7735r.dtbo \
     overlays/adau1977-adc.dtbo \
     overlays/adau7002-simple.dtbo \
     overlays/ads1015.dtbo \
@@ -85,8 +85,8 @@ RPI_KERNEL_DEVICETREE_OVERLAYS = "\
     overlays/adv7282m.dtbo \
     overlays/adv728x-m.dtbo \
     overlays/akkordion-iqdacplus.dtbo \
-    overlays/allo-boss-dac-pcm512x-audio.dtbo \
     overlays/allo-boss2-dac-audio.dtbo \
+    overlays/allo-boss-dac-pcm512x-audio.dtbo \
     overlays/allo-digione.dtbo \
     overlays/allo-katana-dac-audio.dtbo \
     overlays/allo-piano-dac-pcm512x-audio.dtbo \
@@ -94,6 +94,8 @@ RPI_KERNEL_DEVICETREE_OVERLAYS = "\
     overlays/anyspi.dtbo \
     overlays/apds9960.dtbo \
     overlays/applepi-dac.dtbo \
+    overlays/arducam-64mp.dtbo \
+    overlays/arducam-pivariety.dtbo \
     overlays/at86rf233.dtbo \
     overlays/audioinjector-addons.dtbo \
     overlays/audioinjector-bare-i2s.dtbo \
@@ -108,16 +110,17 @@ RPI_KERNEL_DEVICETREE_OVERLAYS = "\
     overlays/cma.dtbo \
     overlays/cutiepi-panel.dtbo \
     overlays/dht11.dtbo \
+    overlays/dionaudio-kiwi.dtbo \
     overlays/dionaudio-loco.dtbo \
     overlays/dionaudio-loco-v2.dtbo \
     overlays/disable-bt.dtbo \
     overlays/disable-wifi.dtbo \
-    overlays/dpi18.dtbo \
     overlays/dpi18cpadhi.dtbo \
+    overlays/dpi18.dtbo \
     overlays/dpi24.dtbo \
     overlays/draws.dtbo \
-    overlays/dwc-otg.dtbo \
     overlays/dwc2.dtbo \
+    overlays/dwc-otg.dtbo \
     overlays/edt-ft5406.dtbo \
     overlays/enc28j60.dtbo \
     overlays/enc28j60-spi2.dtbo \
@@ -125,10 +128,12 @@ RPI_KERNEL_DEVICETREE_OVERLAYS = "\
     overlays/fbtft.dtbo \
     overlays/fe-pi-audio.dtbo \
     overlays/fsm-demo.dtbo \
+    overlays/gc9a01.dtbo \
     overlays/ghost-amp.dtbo \
     overlays/goodix.dtbo \
     overlays/googlevoicehat-soundcard.dtbo \
     overlays/gpio-fan.dtbo \
+    overlays/gpio-hog.dtbo \
     overlays/gpio-ir.dtbo \
     overlays/gpio-ir-tx.dtbo \
     overlays/gpio-key.dtbo \
@@ -139,39 +144,40 @@ RPI_KERNEL_DEVICETREE_OVERLAYS = "\
     overlays/gpio-shutdown.dtbo \
     overlays/hd44780-lcd.dtbo \
     overlays/hdmi-backlight-hwhack-gpio.dtbo \
-    overlays/hifiberry-amp.dtbo \
     overlays/hifiberry-amp100.dtbo \
+    overlays/hifiberry-amp.dtbo \
     overlays/hifiberry-dac.dtbo \
-    overlays/hifiberry-dacplus.dtbo \
     overlays/hifiberry-dacplusadc.dtbo \
     overlays/hifiberry-dacplusadcpro.dtbo \
     overlays/hifiberry-dacplusdsp.dtbo \
     overlays/hifiberry-dacplushd.dtbo \
+    overlays/hifiberry-dacplus.dtbo \
     overlays/hifiberry-digi.dtbo \
     overlays/hifiberry-digi-pro.dtbo \
     overlays/highperi.dtbo \
     overlays/hy28a.dtbo \
     overlays/hy28b-2017.dtbo \
     overlays/hy28b.dtbo \
-    overlays/i-sabre-q2m.dtbo \
-    overlays/i2c-bcm2708.dtbo \
-    overlays/i2c-gpio.dtbo \
-    overlays/i2c-mux.dtbo \
-    overlays/i2c-pwm-pca9685a.dtbo \
-    overlays/i2c-rtc-gpio.dtbo \
-    overlays/i2c-rtc.dtbo \
-    overlays/i2c-sensor.dtbo \
     overlays/i2c0.dtbo \
     overlays/i2c1.dtbo \
     overlays/i2c3.dtbo \
     overlays/i2c4.dtbo \
     overlays/i2c5.dtbo \
     overlays/i2c6.dtbo \
+    overlays/i2c-bcm2708.dtbo \
+    overlays/i2c-fan.dtbo \
+    overlays/i2c-gpio.dtbo \
+    overlays/i2c-mux.dtbo \
+    overlays/i2c-pwm-pca9685a.dtbo \
+    overlays/i2c-rtc-gpio.dtbo \
+    overlays/i2c-rtc.dtbo \
+    overlays/i2c-sensor.dtbo \
     overlays/i2s-gpio28-31.dtbo \
     overlays/ilitek251x.dtbo \
     overlays/imx219.dtbo \
     overlays/imx258.dtbo \
     overlays/imx290.dtbo \
+    overlays/imx296.dtbo \
     overlays/imx378.dtbo \
     overlays/imx477.dtbo \
     overlays/imx519.dtbo \
@@ -181,6 +187,7 @@ RPI_KERNEL_DEVICETREE_OVERLAYS = "\
     overlays/iqaudio-digi-wm8804-audio.dtbo \
     overlays/iqs550.dtbo \
     overlays/irs1125.dtbo \
+    overlays/i-sabre-q2m.dtbo \
     overlays/jedec-spi-nor.dtbo \
     overlays/justboom-both.dtbo \
     overlays/justboom-dac.dtbo \
@@ -227,8 +234,8 @@ RPI_KERNEL_DEVICETREE_OVERLAYS = "\
     overlays/pifi-dac-zero.dtbo \
     overlays/pifi-mini-210.dtbo \
     overlays/piglow.dtbo \
-    overlays/piscreen.dtbo \
     overlays/piscreen2r.dtbo \
+    overlays/piscreen.dtbo \
     overlays/pisound.dtbo \
     overlays/pitft22.dtbo \
     overlays/pitft28-capacitive.dtbo \
@@ -240,6 +247,8 @@ RPI_KERNEL_DEVICETREE_OVERLAYS = "\
     overlays/pwm.dtbo \
     overlays/qca7000.dtbo \
     overlays/qca7000-uart0.dtbo \
+    overlays/ramoops.dtbo \
+    overlays/ramoops-pi4.dtbo \
     overlays/rotary-encoder.dtbo \
     overlays/rpi-backlight.dtbo \
     overlays/rpi-cirrus-wm5102.dtbo \
@@ -251,7 +260,6 @@ RPI_KERNEL_DEVICETREE_OVERLAYS = "\
     overlays/rpi-proto.dtbo \
     overlays/rpi-sense.dtbo \
     overlays/rpi-tv.dtbo \
-    overlays/rpivid-v4l2.dtbo \
     overlays/rra-digidac1-wm8741-audio.dtbo \
     overlays/sainsmart18.dtbo \
     overlays/sc16is750-i2c.dtbo \
@@ -267,9 +275,6 @@ RPI_KERNEL_DEVICETREE_OVERLAYS = "\
     overlays/smi-dev.dtbo \
     overlays/smi-nand.dtbo \
     overlays/smi.dtbo \
-    overlays/spi-gpio35-39.dtbo \
-    overlays/spi-gpio40-45.dtbo \
-    overlays/spi-rtc.dtbo \
     overlays/spi0-0cs.dtbo \
     overlays/spi0-1cs.dtbo \
     overlays/spi0-2cs.dtbo \
@@ -287,6 +292,9 @@ RPI_KERNEL_DEVICETREE_OVERLAYS = "\
     overlays/spi5-2cs.dtbo \
     overlays/spi6-1cs.dtbo \
     overlays/spi6-2cs.dtbo \
+    overlays/spi-gpio35-39.dtbo \
+    overlays/spi-gpio40-45.dtbo \
+    overlays/spi-rtc.dtbo \
     overlays/ssd1306.dtbo \
     overlays/ssd1306-spi.dtbo \
     overlays/ssd1331-spi.dtbo \

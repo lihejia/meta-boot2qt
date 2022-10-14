@@ -46,7 +46,7 @@ environment: &environment
         equals_value: TARGET4
     - type: EnvironmentVariable
       variableName: MACHINE
-      variableValue: jetson-tx2-devkit
+      variableValue: jetson-agx-xavier-devkit
       enable_if:
         condition: property
         property: target.arch
