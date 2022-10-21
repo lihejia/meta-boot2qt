@@ -52,7 +52,7 @@
   <!-- Raspberry Pi -->
   <project name="meta-raspberrypi"
            remote="yocto"
-           revision="0135a02ea577bd39dd552236ead2c5894d89da1d"
+           revision="dacad9302a92b0b7edf8546cdcad1f8ef753e462"
            upstream="kirkstone"
            path="sources/meta-raspberrypi"/>
 
