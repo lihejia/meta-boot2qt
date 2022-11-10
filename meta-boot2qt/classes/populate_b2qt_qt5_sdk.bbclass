@@ -89,6 +89,10 @@ EOF
     echo "set(CMAKE_C_FLAGS \"\${compiler_flags}\")" >> ${MACHINE_CMAKE}
     echo "set(CMAKE_CXX_FLAGS \"\${compiler_flags}\")" >> ${MACHINE_CMAKE}
     echo "set(OE_QMAKE_PATH_EXTERNAL_HOST_BINS ${SDKPATHNATIVE}${OE_QMAKE_PATH_HOST_BINS})" >> ${MACHINE_CMAKE}
+    echo "if(NOT DEFINED CMAKE_INSTALL_PREFIX)" >> ${MACHINE_CMAKE}
+    echo "  set(CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT 1)"  >> ${MACHINE_CMAKE}
+    echo "endif()"  >> ${MACHINE_CMAKE}
+    echo "set(CMAKE_INSTALL_PREFIX "${prefix}" CACHE PATH "Install path prefix")"  >> ${MACHINE_CMAKE}
 }
 
 create_sdk_files_append_sdkmingw32 () {
