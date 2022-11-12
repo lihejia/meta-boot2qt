@@ -44,7 +44,7 @@ IMAGE_CMD:conf() {
     fi
 
     QT_VERSION=$(qmake -query QT_VERSION)
-    cat > ${IMGDEPLOYDIR}/${IMAGE_NAME}.rootfs.conf <<EOF
+    cat > ${IMGDEPLOYDIR}/${IMAGE_NAME}${IMAGE_NAME_SUFFIX}.conf <<EOF
 [${DEPLOY_CONF_NAME}]
 platform=${MACHINE}
 product=${DEPLOY_CONF_TYPE}
