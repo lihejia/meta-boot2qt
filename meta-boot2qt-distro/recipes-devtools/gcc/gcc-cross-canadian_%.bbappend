@@ -27,8 +27,6 @@
 ##
 ############################################################################
 
-EXTRA_OECONF += "--with-plugin-ld=ld"
-
 do_install:append () {
     # remove real-ld symlink
     rm ${D}${libexecdir}/gcc/${TARGET_SYS}/${BINV}/real-ld${EXEEXT}
