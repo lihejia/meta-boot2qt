@@ -5,12 +5,12 @@
           fetch="git://git.yoctoproject.org"/>
   <project name="poky"
            remote="yocto"
-           revision="3e5faccfaf50fee0ba8f6eef6c9bf458137d06d2"
+           revision="refs/tags/yocto-4.1.1"
            upstream="langdale"
            path="sources/poky"/>
   <project name="meta-mingw"
            remote="yocto"
-           revision="b0067202db8573df3d23d199f82987cebe1bee2c"
+           revision="refs/tags/yocto-4.1.1"
            upstream="langdale"
            path="sources/meta-mingw"/>
 
