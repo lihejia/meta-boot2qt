@@ -80,12 +80,12 @@
   <project name="meta-toradex-bsp-common"
            remote="toradex"
            revision="0a52bbb4b3759d21848330bac72f1b23ac9d6c7d"
-           upstream="master"
+           upstream="kirkstone-6.x.y"
            path="sources/meta-toradex-bsp-common"/>
   <project name="meta-toradex-nxp"
            remote="toradex"
            revision="a80de26deaaf94fd735bf00ce724ed568f965b04"
-           upstream="master"
+           upstream="kirkstone-6.x.y"
            path="sources/meta-toradex-nxp"/>
 
 </manifest>
