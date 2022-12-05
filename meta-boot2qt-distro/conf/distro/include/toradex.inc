@@ -32,8 +32,6 @@ include conf/distro/include/fsl.inc
 # include file from meta-toradex-nxp
 include conf/machine/include/${MACHINE}.inc
 
-PREFERRED_PROVIDER_virtual/dtb:use-nxp-bsp = "device-tree-overlays"
-
 IMAGE_CLASSES += "image_type_tezi_b2qt"
 
 QBSP_IMAGE_CONTENT += "\
@@ -56,10 +54,6 @@ DEPLOY_CONF_NAME:colibri-imx7-emmc = "Toradex Colibri iMX7 eMMC"
 DEPLOY_CONF_NAME:colibri-imx8x = "Toradex Colibri iMX8X"
 DEPLOY_CONF_NAME:verdin-imx8mm = "Toradex Verdin iMX8M Mini"
 DEPLOY_CONF_NAME:verdin-imx8mp = "Toradex Verdin iMX8M Plus"
-
-GPULESS_FEATURES = "wayland opengl vulkan webengine"
-GPULESS_FEATURES:imxgpu = ""
-DISTRO_FEATURES:remove = "${GPULESS_FEATURES}"
 
 # Suitable DRI device
 DRI_DEVICE:apalis-imx6 = "card1"
