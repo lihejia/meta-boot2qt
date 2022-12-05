@@ -41,9 +41,6 @@ DEPLOY_CONF_NAME:imx8qpx-mek = "NXP i.MX 8QuadXPlus MEK"
 
 IMAGE_FSTYPES += "wic.xz"
 
-IMX_DEFAULT_BSP = "nxp"
-IMX_DEFAULT_KERNEL:b2qt = "linux-imx"
-
 DEPLOY_CONF_IMAGE_TYPE = "wic.xz"
 
 QBSP_IMAGE_CONTENT += "\
@@ -64,3 +61,7 @@ PREFERRED_VERSION_gstreamer1.0-libav:use-nxp-bsp        ?= "1.20.0"
 PREFERRED_VERSION_gstreamer1.0-rtsp-server:use-nxp-bsp  ?= "1.20.0"
 
 MACHINE_GSTREAMER_1_0_PLUGIN:append:imxgpu = " imx-gst1.0-plugin"
+
+GPULESS_FEATURES = "wayland opengl vulkan webengine"
+DISTRO_FEATURES:remove:mx6ul-generic-bsp = "${GPULESS_FEATURES}"
+DISTRO_FEATURES:remove:mx7-generic-bsp = "${GPULESS_FEATURES}"
