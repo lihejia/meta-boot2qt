@@ -27,8 +27,6 @@
 ##
 ############################################################################
 
-EXTRA_OECONF += "--with-plugin-ld=ld"
-
 do_install:append:sdkmingw32() {
     ln -sf ../libwinpthread-1.dll ${D}${bindir}
     ln -sf ${BINRELPATH}/libwinpthread-1.dll $dest
