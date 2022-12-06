@@ -65,3 +65,5 @@ MACHINE_GSTREAMER_1_0_PLUGIN:append:imxgpu = " imx-gst1.0-plugin"
 GPULESS_FEATURES = "wayland opengl vulkan webengine"
 DISTRO_FEATURES:remove:mx6ul-generic-bsp = "${GPULESS_FEATURES}"
 DISTRO_FEATURES:remove:mx7-generic-bsp = "${GPULESS_FEATURES}"
+
+BBMASK += "meta-freescale/dynamic-layers/qt6-layer/recipes-qt/qt6"
