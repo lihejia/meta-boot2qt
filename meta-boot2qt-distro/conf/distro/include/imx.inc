@@ -1,6 +1,6 @@
 ############################################################################
 ##
-## Copyright (C) 2022 The Qt Company Ltd.
+## Copyright (C) 2021 The Qt Company Ltd.
 ## Contact: https://www.qt.io/licensing/
 ##
 ## This file is part of the Boot to Qt meta layer.
@@ -27,21 +27,31 @@
 ##
 ############################################################################
 
-include conf/distro/include/imx.inc
+IMAGE_FSTYPES += "wic.xz"
 
-DEPLOY_CONF_NAME:imx6qdlsabresd = "NXP i.MX6QP/Q/DL SABRE Smart Device"
-DEPLOY_CONF_NAME:imx7dsabresd = "NXP SABRE SD i.MX7 Dual"
-DEPLOY_CONF_NAME:imx8mm-ddr4-evk = "NXP i.MX 8M Mini DDR4 EVK"
-DEPLOY_CONF_NAME:imx8mm-lpddr4-evk = "NXP i.MX 8M Mini LPDDR4 EVK"
-DEPLOY_CONF_NAME:imx8mn-ddr4-evk = "NXP i.MX 8M Nano DDR4 EVK"
-DEPLOY_CONF_NAME:imx8mn-lpddr4-evk = "NXP i.MX 8M Nano LPDDR4 EVK"
-DEPLOY_CONF_NAME:imx8mp-ddr4-evk = "NXP i.MX 8M Plus DDR4 EVK"
-DEPLOY_CONF_NAME:imx8mp-lpddr4-evk = "NXP i.MX 8M Plus LPDDR4 EVK"
-DEPLOY_CONF_NAME:imx8mq-evk = "NXP i.MX 8MQuad EVK"
-DEPLOY_CONF_NAME:imx8qm-mek = "NXP i.MX 8QuadMax MEK"
-DEPLOY_CONF_NAME:imx8qpx-mek = "NXP i.MX 8QuadXPlus MEK"
+DEPLOY_CONF_IMAGE_TYPE = "wic.xz"
 
-# Use NXP BSP and u-boot for default (meta-freescale-distro)
-IMX_DEFAULT_BSP = "nxp"
-IMX_DEFAULT_BOOTLOADER:imx-nxp-bsp = "u-boot-imx"
-PREFERRED_PROVIDER_virtual/kernel:imx-nxp-bsp = "linux-imx"
+QBSP_IMAGE_CONTENT += "\
+    ${IMAGE_LINK_NAME}.${DEPLOY_CONF_IMAGE_TYPE} \
+    ${IMAGE_LINK_NAME}.conf \
+    ${IMAGE_LINK_NAME}.info \
+    "
+
+QBSP_LICENSE_FILE ?= "${FSL_EULA_FILE}"
+QBSP_LICENSE_NAME ?= "NXP Semiconductors Software License Agreement"
+
+# Use gstreamer from meta-freescale
+PREFERRED_VERSION_gstreamer1.0:use-nxp-bsp              ?= "1.20.0.imx"
+PREFERRED_VERSION_gstreamer1.0-plugins-base:use-nxp-bsp ?= "1.20.0.imx"
+PREFERRED_VERSION_gstreamer1.0-plugins-good:use-nxp-bsp ?= "1.20.0.imx"
+PREFERRED_VERSION_gstreamer1.0-plugins-bad:use-nxp-bsp  ?= "1.20.0.imx"
+PREFERRED_VERSION_gstreamer1.0-libav:use-nxp-bsp        ?= "1.20.0"
+PREFERRED_VERSION_gstreamer1.0-rtsp-server:use-nxp-bsp  ?= "1.20.0"
+
+MACHINE_GSTREAMER_1_0_PLUGIN:append:imxgpu = " imx-gst1.0-plugin"
+
+GPULESS_FEATURES = "wayland opengl vulkan webengine"
+DISTRO_FEATURES:remove:mx6ul-generic-bsp = "${GPULESS_FEATURES}"
+DISTRO_FEATURES:remove:mx7-generic-bsp = "${GPULESS_FEATURES}"
+
+BBMASK += "meta-freescale/dynamic-layers/qt6-layer/recipes-qt/qt6"
