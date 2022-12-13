@@ -27,7 +27,7 @@
 ##
 ############################################################################
 
-include conf/distro/include/fsl.inc
+include conf/distro/include/imx.inc
 
 # include file from meta-toradex-nxp
 include conf/machine/include/${MACHINE}.inc
