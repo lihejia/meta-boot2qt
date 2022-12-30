@@ -45,8 +45,6 @@ PREFERRED_VERSION_gstreamer1.0:use-nxp-bsp              ?= "1.20.0.imx"
 PREFERRED_VERSION_gstreamer1.0-plugins-base:use-nxp-bsp ?= "1.20.0.imx"
 PREFERRED_VERSION_gstreamer1.0-plugins-good:use-nxp-bsp ?= "1.20.0.imx"
 PREFERRED_VERSION_gstreamer1.0-plugins-bad:use-nxp-bsp  ?= "1.20.0.imx"
-PREFERRED_VERSION_gstreamer1.0-libav:use-nxp-bsp        ?= "1.20.0"
-PREFERRED_VERSION_gstreamer1.0-rtsp-server:use-nxp-bsp  ?= "1.20.0"
 
 MACHINE_GSTREAMER_1_0_PLUGIN:append:imxgpu = " imx-gst1.0-plugin"
 
