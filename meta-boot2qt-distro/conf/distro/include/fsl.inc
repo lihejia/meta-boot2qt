@@ -44,4 +44,4 @@ DEPLOY_CONF_NAME:imx8qpx-mek = "NXP i.MX 8QuadXPlus MEK"
 # Use NXP BSP and u-boot for default (meta-freescale-distro)
 IMX_DEFAULT_BSP = "nxp"
 IMX_DEFAULT_BOOTLOADER:imx-nxp-bsp = "u-boot-imx"
-PREFERRED_PROVIDER_virtual/kernel:imx-nxp-bsp = "linux-imx"
+IMX_DEFAULT_KERNEL:imx-nxp-bsp = "linux-imx"
