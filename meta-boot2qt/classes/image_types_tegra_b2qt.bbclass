@@ -31,7 +31,7 @@ tegraflash_custom_post() {
     cat > prepare-image.sh <<END
 #!/bin/sh -e
 if [ ! -e "${IMAGE_BASENAME}.img" ]; then
-    xz -dc ../${IMAGE_LINK_NAME}.wic.xz | dd of=${IMAGE_LINK_NAME}.${IMAGE_TEGRAFLASH_FS_TYPE} iflag=fullblock skip=1 bs=$(expr ${IMAGE_ROOTFS_ALIGNMENT} \* 1024) count=$(expr ${ROOTFS_SIZE} / 1024)
+    xz -dc ../${IMAGE_LINK_NAME}.wic.xz | dd of=${IMAGE_BASENAME}.${IMAGE_TEGRAFLASH_FS_TYPE} iflag=fullblock skip=1 bs=$(expr ${IMAGE_ROOTFS_ALIGNMENT} \* 1024) count=$(expr ${ROOTFS_SIZE} / 1024)
 fi
 echo "Flash image ready"
 END
