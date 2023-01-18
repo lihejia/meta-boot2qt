@@ -44,7 +44,8 @@ IMAGE_CMD:conf() {
     fi
 
     cat > ${IMGDEPLOYDIR}/${IMAGE_NAME}${IMAGE_NAME_SUFFIX}.conf <<EOF
-[${DEPLOY_CONF_NAME}]
+[${MACHINE}]
+name=${DEPLOY_CONF_NAME}
 platform=${MACHINE}
 product=${DEPLOY_CONF_TYPE}
 qt=Qt ${QT_VERSION}
