@@ -36,7 +36,7 @@ require recipes-qt/qt5/qt5-git.inc
 QT_MODULE_BRANCH = "5.15"
 QT_GIT_PROJECT = "qt-apps"
 
-SRCREV = "474fa4b7aee62e704158d213d9e67eba74c69401"
+SRCREV = "4053446723bb71295eae94c5ddd316a56e9d4428"
 
 DEPENDS = "qtbase"
 RDEPENDS_${PN} = " \
