@@ -144,7 +144,9 @@ RUN sh *.sh -d /opt/toolchain -y && rm *.sh\n");
         "UNDOEXECUTE",
         "@SDKToolBinary@", "rmCMake", "--id", component.name]);
 
+    var deviceId = "";
     if (container) {
+        deviceId = component.name;
         component.addOperation("Execute",
             ["@SDKToolBinary@", "addDev",
             "--id", component.name,
@@ -159,14 +161,16 @@ RUN sh *.sh -d /opt/toolchain -y && rm *.sh\n");
             "@SDKToolBinary@", "rmDev", "--id", component.name]);
     }
 
-    var addKitOperations =
+    component.addOperation("Execute",
         ["@SDKToolBinary@", "addKit",
          "--id", component.name,
          "--name", platform,
+         "--mkspec", "linux-oe-g++",
          "--qt", component.name,
          "--debuggerid", component.name,
          "--sysroot", path + "/sysroots/" + sysroot,
          "--devicetype", "QdbLinuxOsType",
+         "--builddevice", deviceId,
          "--Ctoolchain", toolchainId + ".gcc",
          "--Cxxtoolchain", toolchainId + ".g++",
          "--cmake", component.name,
@@ -176,17 +180,9 @@ RUN sh *.sh -d /opt/toolchain -y && rm *.sh\n");
          "--cmake-config", "CMAKE_PREFIX_PATH:STRING=%{Qt:QT_INSTALL_PREFIX}",
          "--cmake-config", "QT_QMAKE_EXECUTABLE:STRING=%{Qt:qmakeExecutable}",
          "--cmake-config", "CMAKE_TOOLCHAIN_FILE:FILEPATH=" + path + "/sysroots/" + hostSysroot + "/usr/lib/cmake/Qt6/qt.toolchain.cmake",
-         "--cmake-config", "CMAKE_MAKE_PROGRAM:FILEPATH=" + path + "/sysroots/"+ hostSysroot + "/usr/bin/ninja" + executableExt];
-
-    if (container) {
-        addKitOperations.push("--builddevice", component.name);
-    }
-    if (!container) {
-        addKitOperations.push("--mkspec", "linux-oe-g++");
-    }
-
-    addKitOperations.push("UNDOEXECUTE", "@SDKToolBinary@", "rmKit", "--id", component.name);
-    component.addOperation("Execute", addKitOperations);
+         "--cmake-config", "CMAKE_MAKE_PROGRAM:FILEPATH=" + path + "/sysroots/"+ hostSysroot + "/usr/bin/ninja" + executableExt,
+         "UNDOEXECUTE",
+         "@SDKToolBinary@", "rmKit", "--id", component.name]);
 
     if (container) {
         var settingsFile = installer.value("QtCreatorInstallerSettingsFile");
