@@ -5,12 +5,12 @@
           fetch="git://git.yoctoproject.org"/>
   <project name="poky"
            remote="yocto"
-           revision="2c6f0b9228b47459dd1b67d578792cd017006128"
+           revision="b57d4de337b59a1959f486abee1821df614b6333"
            upstream="master"
            path="sources/poky"/>
   <project name="meta-mingw"
            remote="yocto"
-           revision="1014352913133177996dae35966a131f5c56eec2"
+           revision="250617ffa524c082b848487359b9d045703d59c2"
            upstream="master"
            path="sources/meta-mingw"/>
 
@@ -19,7 +19,7 @@
           fetch="git://git.openembedded.org"/>
   <project name="meta-openembedded"
            remote="oe"
-           revision="84ffd15cd1f77da445c9900a2d08892cd58f3313"
+           revision="ca7082caa800124b4e0a7b36175f60387d1e3f8c"
            upstream="master"
            path="sources/meta-openembedded"/>
 
@@ -40,19 +40,19 @@
           fetch="https://github.com/Freescale"/>
   <project name="meta-freescale"
            remote="freescale"
-           revision="ae706d37c47f5a8c0c70d6bb66bc313e960d3fb4"
+           revision="9b82a890e8725f74f891475ca67cf2b1ea2c638a"
            upstream="master"
            path="sources/meta-freescale"/>
   <project name="meta-freescale-3rdparty"
            remote="freescale"
-           revision="21c09dc71b16e5dd72ff864acdf6cd964a3ffbc2"
+           revision="2441b91ef5997fdcf7127fbe97ac7e4568dd83a4"
            upstream="master"
            path="sources/meta-freescale-3rdparty"/>
 
   <!-- Raspberry Pi -->
   <project name="meta-raspberrypi"
            remote="yocto"
-           revision="e103faeff5fc791124a9b1d13f2ebe28fc223a96"
+           revision="896566aa928868bade64d21af468c008b94785c3"
            upstream="master"
            path="sources/meta-raspberrypi"/>
 
@@ -61,7 +61,7 @@
           fetch="git://git.yoctoproject.org"/>
   <project name="meta-intel"
            remote="intel"
-           revision="1ef50594738845e8228fb1caa9b90f1ab6331b41"
+           revision="a9242002cb14489013d536be010a243d6da01dd2"
            upstream="master"
            path="sources/meta-intel"/>
 
@@ -70,7 +70,7 @@
           fetch="https://github.com/OE4T"/>
   <project name="meta-tegra"
            remote="OE4T"
-           revision="73c6642d401c99fd1afb93edbea4894127512955"
+           revision="f3f993663d2c5573e9ff01bd85f109609ce24f36"
            upstream="master"
            path="sources/meta-tegra"/>
 
@@ -79,12 +79,12 @@
           fetch="git://git.toradex.com"/>
   <project name="meta-toradex-bsp-common"
            remote="toradex"
-           revision="ec6cd7c8e5e6548cacbb1e1b250a0f377b814ea3"
+           revision="e55dc4b6fa216ffe882b1b918103ea4319c39b66"
            upstream="master"
            path="sources/meta-toradex-bsp-common"/>
   <project name="meta-toradex-nxp"
            remote="toradex"
-           revision="503df2d68b6604167942ad495f47dc2ada18699f"
+           revision="f03d2d482913dc75b550ef92cb789679e5cdd226"
            upstream="master"
            path="sources/meta-toradex-nxp"/>
 
