@@ -29,7 +29,7 @@
 
 inherit image_types
 
-do_image_conf[depends] += "qtbase-native:do_populate_sysroot xz-native:do_populate_sysroot file-native:do_populate_sysroot gawk-native:do_populate_sysroot"
+do_image_conf[depends] += "xz-native:do_populate_sysroot file-native:do_populate_sysroot gawk-native:do_populate_sysroot"
 
 DEPLOY_CONF_NAME ?= "${MACHINE}"
 DEPLOY_CONF_TYPE ?= "Boot2Qt"
@@ -43,12 +43,11 @@ IMAGE_CMD:conf() {
         IMAGE_UNCOMPRESSED_SIZE=$(xz --robot --list ${IMGDEPLOYDIR}/${IMAGE_LINK_NAME}.${DEPLOY_CONF_IMAGE_TYPE} | awk -F ' ' '{if (NR==2){ print $5 }}')
     fi
 
-    QT_VERSION=$(qmake -query QT_VERSION)
     cat > ${IMGDEPLOYDIR}/${IMAGE_NAME}${IMAGE_NAME_SUFFIX}.conf <<EOF
 [${DEPLOY_CONF_NAME}]
 platform=${MACHINE}
 product=${DEPLOY_CONF_TYPE}
-qt=Qt $QT_VERSION
+qt=Qt ${QT_VERSION}
 os=linux
 imagefile=${IMAGE_LINK_NAME}.${DEPLOY_CONF_IMAGE_TYPE}
 imageuncompressedsize=$IMAGE_UNCOMPRESSED_SIZE
