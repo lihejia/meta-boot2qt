@@ -27,7 +27,6 @@
 ##
 ############################################################################
 
-do_image[depends] += "qtbase-native:do_populate_sysroot"
 IMAGE_CMD:teziimg:append() {
     ${IMAGE_CMD_TAR} --transform 's,^,${IMAGE_NAME}-Tezi_${TEZI_VERSION}/,' -rhf ${IMGDEPLOYDIR}/${IMAGE_NAME}-Tezi_${TEZI_VERSION}.tar TEZI_B2QT_EULA.TXT Built_with_Qt.png
     ln -fs ${TEZI_IMAGE_NAME}-Tezi_${TEZI_VERSION}.tar ${IMGDEPLOYDIR}/${IMAGE_LINK_NAME}.tezi.tar
@@ -37,9 +36,8 @@ def rootfs_tezi_json_b2qt(d, flash_type, flash_data, json_file, uenv_file):
     import json
     from collections import OrderedDict
     from datetime import datetime
-    import subprocess
-    qtversion = subprocess.check_output(['qmake', '-query', 'QT_VERSION']).decode('utf-8').strip()
 
+    qtversion = d.getVar('QT_VERSION')
     deploydir = d.getVar('DEPLOY_DIR_IMAGE')
     data = OrderedDict({ "config_format": d.getVar('TEZI_CONFIG_FORMAT'), "autoinstall": False })
 
