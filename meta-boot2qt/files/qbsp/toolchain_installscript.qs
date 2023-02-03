@@ -48,7 +48,7 @@ Component.prototype.createOperations = function()
     var dockerPrefix = "";
 
     var container = false;
-    if ( "@TOOLCHAIN_HOST_TYPE@" == "linux" && systemInfo.kernelType !== "linux" || @FORCE_CONTAINER_TOOLCHAIN@)
+    if ("@TOOLCHAIN_HOST_TYPE@" == "linux" && systemInfo.kernelType !== "linux" || @FORCE_CONTAINER_TOOLCHAIN@ || installer.environmentVariable("FORCE_CONTAINER_TOOLCHAIN"))
        container = true;
 
     var path = installer.value("TargetDir") + installPath;
