@@ -27,18 +27,11 @@
 ##
 ############################################################################
 
+FILESEXTRAPATHS:prepend := "${THISDIR}/files:"
+
 # kernel image files are not needed in the image
 RDEPENDS:${KERNEL_PACKAGE_NAME}-base = ""
 
-do_preconfigure:prepend() {
-    # FunctionFS for qdbd
-    echo "CONFIG_USB_FUNCTIONFS=m"  >> ${WORKDIR}/defconfig
-
-    # Enable USB serial support
-    echo "CONFIG_USB_SERIAL_PL2303=m"       >> ${WORKDIR}/defconfig
-
-    echo "CONFIG_NAMESPACES=y"              >> ${WORKDIR}/defconfig
-
-    # Enable uprobe for profiling
-    echo "CONFIG_UPROBE_EVENT=y"            >> ${WORKDIR}/defconfig
-}
+SRC_URI:append = "\
+    file://profiling.cfg \
+"
