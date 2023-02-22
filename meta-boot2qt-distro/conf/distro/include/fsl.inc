@@ -39,7 +39,7 @@ DEPLOY_CONF_NAME:imx8mp-ddr4-evk = "NXP i.MX 8M Plus DDR4 EVK"
 DEPLOY_CONF_NAME:imx8mp-lpddr4-evk = "NXP i.MX 8M Plus LPDDR4 EVK"
 DEPLOY_CONF_NAME:imx8mq-evk = "NXP i.MX 8MQuad EVK"
 DEPLOY_CONF_NAME:imx8qm-mek = "NXP i.MX 8QuadMax MEK"
-DEPLOY_CONF_NAME:imx8qpx-mek = "NXP i.MX 8QuadXPlus MEK"
+DEPLOY_CONF_NAME:imx8qxp-mek = "NXP i.MX 8QuadXPlus MEK"
 
 # Use NXP BSP and u-boot for default (meta-freescale-distro)
 IMX_DEFAULT_BSP = "nxp"
