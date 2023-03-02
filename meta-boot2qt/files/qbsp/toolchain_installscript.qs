@@ -168,7 +168,7 @@ RUN sh *.sh -d /opt/toolchain -y && rm *.sh\n");
          "--mkspec", "linux-oe-g++",
          "--qt", component.name,
          "--debuggerid", component.name,
-         "--sysroot", path + "/sysroots/" + sysroot,
+         "--sysroot", dockerPrefix + path + "/sysroots/" + sysroot,
          "--devicetype", "QdbLinuxOsType",
          "--builddevice", deviceId,
          "--Ctoolchain", toolchainId + ".gcc",
