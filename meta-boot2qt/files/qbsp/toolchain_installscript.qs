@@ -165,7 +165,7 @@ RUN sh *.sh -d /opt/toolchain -y && rm *.sh\n");
          "--name", platform,
          "--qt", component.name,
          "--debuggerid", component.name,
-         "--sysroot", path + "/sysroots/" + sysroot,
+         "--sysroot", dockerPrefix + path + "/sysroots/" + sysroot,
          "--devicetype", "QdbLinuxOsType",
          "--Ctoolchain", toolchainId + ".gcc",
          "--Cxxtoolchain", toolchainId + ".g++",
