@@ -85,3 +85,5 @@ RDEPENDS_${PN} += " \
     qtxmlpatterns \
     qtvirtualkeyboard \
     "
+
+RDEPENDS_${PN} += "${@bb.utils.filter('DISTRO_FEATURES', 'qtinsighttracker', d)}"

@@ -86,3 +86,5 @@ RDEPENDS_${PN} += " \
     qtwebchannel-dev \
     qtxmlpatterns-dev \
     "
+
+RDEPENDS_${PN} += "${@bb.utils.contains('DISTRO_FEATURES', 'qtinsighttracker', 'qtinsighttracker-dev', '', d)}"
