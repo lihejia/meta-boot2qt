@@ -40,12 +40,12 @@
           fetch="https://github.com/Freescale"/>
   <project name="meta-freescale"
            remote="freescale"
-           revision="9b82a890e8725f74f891475ca67cf2b1ea2c638a"
+           revision="adf69723cf24f81697aa363a093e939f642e60ab"
            upstream="master"
            path="sources/meta-freescale"/>
   <project name="meta-freescale-3rdparty"
            remote="freescale"
-           revision="2441b91ef5997fdcf7127fbe97ac7e4568dd83a4"
+           revision="3f039834ad1b701b9b2c57e9df7fffa1e0b42c71"
            upstream="master"
            path="sources/meta-freescale-3rdparty"/>
 
