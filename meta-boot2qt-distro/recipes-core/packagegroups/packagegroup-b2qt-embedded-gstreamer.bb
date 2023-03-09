@@ -36,9 +36,6 @@ inherit packagegroup
 MACHINE_GSTREAMER_1_0_PLUGIN ?= ""
 
 RDEPENDS:${PN} = "\
-        gstreamer1.0-meta-base \
-        gstreamer1.0-meta-video \
-        gstreamer1.0-meta-audio \
         gstreamer1.0-plugins-base-meta \
         gstreamer1.0-plugins-good-meta \
         gstreamer1.0-plugins-ugly-meta \
