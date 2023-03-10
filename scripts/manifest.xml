@@ -45,12 +45,12 @@
           fetch="https://github.com/Freescale"/>
   <project name="meta-freescale"
            remote="freescale"
-           revision="325c08c0773a2f1c54d28ea8aeda7c3d110d88a3"
+           revision="e353e020f161d6674c825e8abc9bdcece71ca8a5"
            upstream="dunfell"
            path="sources/meta-freescale"/>
   <project name="meta-freescale-3rdparty"
            remote="freescale"
-           revision="f37f72a85ba273b27347169b727c889f42b91d6c"
+           revision="4c0a166fa2809f74c93bd4c56d9a0f7ccb7818c8"
            upstream="dunfell"
            path="sources/meta-freescale-3rdparty"/>
 
