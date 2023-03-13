@@ -45,12 +45,12 @@ PACKAGE_EXCLUDE_COMPLEMENTARY += "\
   ^libqt6 \
   qmlcompilerplus qt3d qt5compat qtapplicationmanager qtbase qtcharts \
   qtcoap qtconnectivity qtdatavis3d qtdeclarative qtdeviceutilities \
-  qthttpserver qtimageformats qtinterfaceframework qtlanguageserver qtlottie \
-  qtmqtt qtmultimedia qtnetworkauth qtopcua qtpdf qtpositioning \
-  qtquick3dphysics qtquick3d qtquickdesigner-components qtquicktimeline \
-  qtremoteobjects qtscxml qtsensors qtserialbus qtserialport qtshadertools \
-  qtspeech qtsvg qttools qttranslations qtvirtualkeyboard qtvncserver \
-  qtwayland qtwebchannel qtwebengine qtwebsockets qtwebview \
+  qtgrpc qthttpserver qtimageformats qtinsighttracker qtinterfaceframework \
+  qtlanguageserver qtlocation qtlottie qtmqtt qtmultimedia qtnetworkauth \
+  qtopcua qtpdf qtpositioning qtquick3d qtquick3dphysics qtquickdesigner-components \
+  qtquicktimeline qtremoteobjects qtscxml qtsensors qtserialbus qtserialport \
+  qtshadertools qtspeech qtsvg qttools qttranslations qtvirtualkeyboard \
+  qtvncserver qtwayland qtwebchannel qtwebengine qtwebsockets qtwebview \
 "
 
 SDK_POSTPROCESS_COMMAND:prepend = "apply_ci_fixes;"
