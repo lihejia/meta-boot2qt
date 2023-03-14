@@ -40,14 +40,6 @@ QBSP_IMAGE_CONTENT += "\
 QBSP_LICENSE_FILE ?= "${FSL_EULA_FILE}"
 QBSP_LICENSE_NAME ?= "NXP Semiconductors Software License Agreement"
 
-# Use gstreamer from meta-freescale
-PREFERRED_VERSION_gstreamer1.0:use-nxp-bsp              ?= "1.20.0.imx"
-PREFERRED_VERSION_gstreamer1.0-plugins-base:use-nxp-bsp ?= "1.20.0.imx"
-PREFERRED_VERSION_gstreamer1.0-plugins-good:use-nxp-bsp ?= "1.20.0.imx"
-PREFERRED_VERSION_gstreamer1.0-plugins-bad:use-nxp-bsp  ?= "1.20.0.imx"
-
-MACHINE_GSTREAMER_1_0_PLUGIN:append:imxgpu = " imx-gst1.0-plugin"
-
 GPULESS_FEATURES = "wayland opengl vulkan webengine"
 DISTRO_FEATURES:remove:mx6ul-generic-bsp = "${GPULESS_FEATURES}"
 DISTRO_FEATURES:remove:mx7-generic-bsp = "${GPULESS_FEATURES}"
