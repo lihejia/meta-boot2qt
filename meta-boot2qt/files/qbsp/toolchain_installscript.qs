@@ -52,6 +52,7 @@ Component.prototype.createOperations = function()
        container = true;
 
     var path = installer.value("TargetDir") + installPath;
+    var docker;
     if (!container) {
         if (systemInfo.kernelType !== "winnt") {
             var script = path + "/" + sdkFile;
@@ -62,6 +63,23 @@ Component.prototype.createOperations = function()
             path = path.replace(/\\/g, "/");
         }
     } else {
+        var dockerPaths = [];
+        if (systemInfo.kernelType == "winnt")
+            dockerPaths.push("C:/Program Files/Docker/Docker/resources/bin/docker");
+        else if (systemInfo.kernelType == "darwin")
+            dockerPaths.push(
+                "/usr/local/bin/docker",
+                "/Applications/Docker.app/Contents/Resources/bin/docker",
+                "/opt/homebrew/bin/docker");
+        dockerPaths.push("docker");
+        for (i in dockerPaths) {
+            docker = dockerPaths[i];
+            var ret = installer.execute(docker, ["--version"]);
+            if (ret.length != 0) {
+                break;
+            }
+        }
+
         component.addOperation("AppendFile", path + "/Dockerfile",
             "\
 FROM --platform=linux/@DOCKER_ARCH@ ubuntu:22.04\n\
@@ -71,15 +89,15 @@ COPY *.sh /\n\
 RUN sh *.sh -d /opt/toolchain -y && rm *.sh\n");
 
         component.addOperation("Execute", [
-            "docker",
+            docker,
             "build", path,
             "-t", imageTag,
-            "errormessage=Installer was unable to run docker. " +
+            "errormessage=Installer was unable to run docker.\n" +
             "Make sure Docker is installed and running before continuing.\n\n" +
             "The toolchain Docker container can also be created manually by running command:\n" +
             "docker build " + path + " -t " + imageTag,
             "UNDOEXECUTE",
-            "docker", "image", "rm", "-f", imageTag]);
+            docker, "image", "rm", "-f", imageTag]);
         path = "/opt/toolchain";
         dockerPrefix = "docker://" + imageTag;
     }
