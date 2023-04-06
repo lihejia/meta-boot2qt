@@ -92,12 +92,12 @@
           fetch="git://git.toradex.com"/>
   <project name="meta-toradex-bsp-common"
            remote="toradex"
-           revision="029a663150449a5e71b84dd4000476754d525c8c"
+           revision="f88e4c50e64ca144a7a15bd50c92a13d325f6780"
            upstream="dunfell-5.x.y"
            path="sources/meta-toradex-bsp-common"/>
   <project name="meta-toradex-nxp"
            remote="toradex"
-           revision="ee63c90fde9fde0229bff9ac1c5cffe356fc4f41"
+           revision="b288744310a77181db0fde2bee5d86e7d890f28b"
            upstream="dunfell-5.x.y"
            path="sources/meta-toradex-nxp"/>
 
