@@ -40,7 +40,7 @@
           fetch="https://github.com/Freescale"/>
   <project name="meta-freescale"
            remote="freescale"
-           revision="ded147b76123365f2700fd8cab402869eca3219a"
+           revision="1363afb2811b97aebb22eece13c87b1143932085"
            upstream="kirkstone"
            path="sources/meta-freescale"/>
   <project name="meta-freescale-3rdparty"
