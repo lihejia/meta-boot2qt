@@ -55,10 +55,5 @@ QBSP_IMAGE_CONTENT += "\
 # NVIDIA's Vulkan support is for X only
 DISTRO_FEATURES:remove = "vulkan"
 
-# https://github.com/madisongh/meta-tegra/issues/236
-KERNEL_MODULE_AUTOLOAD:remove = "tegra-udrm"
-KERNEL_MODULE_PROBECONF:remove = "tegra-udrm"
-module_conf_tegra-udrm = ""
-
 NVIDIA_DEVNET_MIRROR ?= "file://${BSPDIR}/sources/nvidia-devnet-mirror"
 NVIDIA_DEVNET_MIRROR[vardepsexclude] = "BSPDIR"
