@@ -75,7 +75,7 @@
           fetch="https://github.com/OE4T"/>
   <project name="meta-tegra"
            remote="OE4T"
-           revision="5443021f6908bcaa40880884e9225b0e21aefbac"
+           revision="5260d103badac09e0192547cd3736059a355e43d"
            upstream="dunfell"
            path="sources/meta-tegra"/>
   <!-- internal layer for the nvidia devnet downloads -->

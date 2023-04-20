@@ -27,6 +27,12 @@
 ##
 ############################################################################
 
+FILESEXTRAPATHS_prepend := "${THISDIR}/${PN}:"
+
+SRC_URI += " \
+    file://0001-eglfs-add-a-default-framebuffer-to-NVIDIA-eglstreams.patch \
+    "
+
 PACKAGECONFIG += "kms"
 
 QT_QPA_EGLFS_INTEGRATION ?= "eglfs_kms_egldevice"

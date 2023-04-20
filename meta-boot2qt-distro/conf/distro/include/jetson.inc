@@ -27,6 +27,11 @@
 ##
 ############################################################################
 
+# Mask already applied & non-applying patches
+BBMASK += "\
+    meta-tegra/external/qt5-layer/recipes-qt/qt5/qtbase_%.bbappend \
+    "
+
 # without the distro_bootpart that's not supported by stock u-boot
 KERNEL_ROOTSPEC = "root=/dev/mmcblk${devnum}p1 rw rootwait"
 KERNEL_ROOTSPEC_jetson-nano-2gb-devkit = "root=/dev/mmcblk0p1 rw rootwait"
