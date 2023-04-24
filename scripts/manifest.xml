@@ -61,7 +61,7 @@
           fetch="git://git.yoctoproject.org"/>
   <project name="meta-intel"
            remote="intel"
-           revision="09e30d85e2e405e2f4a0e35c5d72aa285a2d8cbc"
+           revision="13a03c109aecfe275e7539b74c1ab94db9688d9b"
            upstream="langdale"
            path="sources/meta-intel"/>
 
