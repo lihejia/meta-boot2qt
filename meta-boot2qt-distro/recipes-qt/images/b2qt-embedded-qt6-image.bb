@@ -29,7 +29,7 @@
 
 SUMMARY = "Qt for Device Creation Demo Image"
 LICENSE = "The-Qt-Company-Commercial"
-LIC_FILES_CHKSUM = "file://${BOOT2QTBASE}/licenses/The-Qt-Company-Commercial;md5=38de3b110ade3b6ee2f0b6a95ab16f1a"
+LIC_FILES_CHKSUM = "file://${BOOT2QTBASE}/licenses/The-Qt-Company-Commercial;md5=40a1036f91cefc0e3fabad241fb5f187"
 
 DEPLOY_CONF_TYPE = "Boot2Qt ${QT_VERSION}"
 
