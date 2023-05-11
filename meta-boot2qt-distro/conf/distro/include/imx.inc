@@ -43,5 +43,6 @@ QBSP_LICENSE_NAME ?= "NXP Semiconductors Software License Agreement"
 GPULESS_FEATURES = "wayland opengl vulkan webengine"
 DISTRO_FEATURES:remove:mx6ul-generic-bsp = "${GPULESS_FEATURES}"
 DISTRO_FEATURES:remove:mx7-generic-bsp = "${GPULESS_FEATURES}"
+DISTRO_FEATURES:remove:mx93-generic-bsp = "${GPULESS_FEATURES}"
 
 BBMASK += "meta-freescale/dynamic-layers/qt6-layer/recipes-qt/qt6"
