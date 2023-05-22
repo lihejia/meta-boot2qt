@@ -36,7 +36,7 @@
           fetch="ssh://codereview.qt-project.org/yocto"/>
   <project name="meta-qt5"
            remote="qt"
-           revision="8bcd605984af55001ff94c9127590eec29547a91"
+           revision="6fe83d96d591c8d79b132ee40df13d70e01a4930"
            upstream="lts-5.15"
            path="sources/meta-qt5"/>
 
