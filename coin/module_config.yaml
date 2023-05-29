@@ -7,7 +7,7 @@ accept_configuration:
       equals_value: Yocto
     - condition: property
       property: target.arch
-      in_values: [TARGET1, TARGET2, TARGET3, TARGET4, TARGET5, TARGET6, TARGET7]
+      in_values: [TARGET1, TARGET2, TARGET3, TARGET4, TARGET5]
 
 machine_type:
     Build:
@@ -18,53 +18,39 @@ environment: &environment
   instructions:
     - type: EnvironmentVariable
       variableName: MACHINE
-      variableValue: apalis-imx6
+      variableValue: imx8qm-mek
       enable_if:
         condition: property
         property: target.arch
         equals_value: TARGET1
     - type: EnvironmentVariable
       variableName: MACHINE
-      variableValue: colibri-imx6ull
+      variableValue: imx8mm-lpddr4-evk
       enable_if:
         condition: property
         property: target.arch
         equals_value: TARGET2
     - type: EnvironmentVariable
       variableName: MACHINE
-      variableValue: imx8qm-mek
+      variableValue: jetson-agx-xavier-devkit
       enable_if:
         condition: property
         property: target.arch
         equals_value: TARGET3
     - type: EnvironmentVariable
       variableName: MACHINE
-      variableValue: imx8mm-lpddr4-evk
+      variableValue: raspberrypi4-64
       enable_if:
         condition: property
         property: target.arch
         equals_value: TARGET4
     - type: EnvironmentVariable
       variableName: MACHINE
-      variableValue: jetson-agx-xavier-devkit
-      enable_if:
-        condition: property
-        property: target.arch
-        equals_value: TARGET5
-    - type: EnvironmentVariable
-      variableName: MACHINE
-      variableValue: raspberrypi4-64
-      enable_if:
-        condition: property
-        property: target.arch
-        equals_value: TARGET6
-    - type: EnvironmentVariable
-      variableName: MACHINE
       variableValue: intel-skylake-64
       enable_if:
         condition: property
         property: target.arch
-        equals_value: TARGET7
+        equals_value: TARGET5
 
 build_instructions:
   - *environment
