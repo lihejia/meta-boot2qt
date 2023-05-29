@@ -73,19 +73,4 @@
            revision="8e2fc6b47c74b05de37528274dc61aac1a5035cf"
            upstream="langdale"
            path="sources/meta-tegra"/>
-
-  <!-- Toradex -->
-  <remote name="toradex"
-          fetch="git://git.toradex.com"/>
-  <project name="meta-toradex-bsp-common"
-           remote="toradex"
-           revision="c695ebf3b5a221a15d522db45bf824b7f9213fe7"
-           upstream="master"
-           path="sources/meta-toradex-bsp-common"/>
-  <project name="meta-toradex-nxp"
-           remote="toradex"
-           revision="5ee28ba98d0b69666c6a66fd36516e31a26a73a7"
-           upstream="master"
-           path="sources/meta-toradex-nxp"/>
-
 </manifest>
