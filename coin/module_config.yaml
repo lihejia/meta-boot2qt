@@ -7,7 +7,7 @@ accept_configuration:
       equals_value: Yocto
     - condition: property
       property: target.arch
-      in_values: [TARGET1, TARGET2, TARGET3, TARGET4, TARGET5]
+      in_values: [TARGET1, TARGET2, TARGET3]
 
 machine_type:
     Build:
@@ -18,39 +18,25 @@ environment: &environment
   instructions:
     - type: EnvironmentVariable
       variableName: MACHINE
-      variableValue: apalis-imx6
+      variableValue: imx8qm-mek
       enable_if:
         condition: property
         property: target.arch
         equals_value: TARGET1
     - type: EnvironmentVariable
       variableName: MACHINE
-      variableValue: colibri-imx6ull
+      variableValue: imx8mm-lpddr4-evk
       enable_if:
         condition: property
         property: target.arch
         equals_value: TARGET2
     - type: EnvironmentVariable
       variableName: MACHINE
-      variableValue: imx8qm-mek
-      enable_if:
-        condition: property
-        property: target.arch
-        equals_value: TARGET3
-    - type: EnvironmentVariable
-      variableName: MACHINE
-      variableValue: imx8mm-lpddr4-evk
-      enable_if:
-        condition: property
-        property: target.arch
-        equals_value: TARGET4
-    - type: EnvironmentVariable
-      variableName: MACHINE
       variableValue: jetson-tx2-devkit
       enable_if:
         condition: property
         property: target.arch
-        equals_value: TARGET5
+        equals_value: TARGET3
 
 build_instructions:
   - *environment
