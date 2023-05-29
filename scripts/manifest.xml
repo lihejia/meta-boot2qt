@@ -73,19 +73,4 @@
            revision="583f839ccf2c7b8e90dbf74975399c92551747b2"
            upstream="kirkstone-l4t-r32.7.x"
            path="sources/meta-tegra"/>
-
-  <!-- Toradex -->
-  <remote name="toradex"
-          fetch="git://git.toradex.com"/>
-  <project name="meta-toradex-bsp-common"
-           remote="toradex"
-           revision="a969df0f7e2188271e80f67f97ab1a0bc0e67b9c"
-           upstream="kirkstone-6.x.y"
-           path="sources/meta-toradex-bsp-common"/>
-  <project name="meta-toradex-nxp"
-           remote="toradex"
-           revision="0e6c25e8c7ad105daf6c8737fbdee1c97c4edb41"
-           upstream="kirkstone-6.x.y"
-           path="sources/meta-toradex-nxp"/>
-
 </manifest>

@@ -33,17 +33,6 @@ MACHINE_FAMILY:qemuall = "qemu"
 MACHINE_FAMILY:rpi = "raspberrypi"
 MACHINE_FAMILY:tegra = "jetson"
 
-# Toradex has no overrides that would distinguish them from other nxp boards
-MACHINE_FAMILY:apalis-imx6 = "toradex"
-MACHINE_FAMILY:apalis-imx8 = "toradex"
-MACHINE_FAMILY:colibri-imx6 = "toradex"
-MACHINE_FAMILY:colibri-imx6ull = "toradex"
-MACHINE_FAMILY:colibri-imx7 = "toradex"
-MACHINE_FAMILY:colibri-imx7-emmc = "toradex"
-MACHINE_FAMILY:colibri-imx8x = "toradex"
-MACHINE_FAMILY:verdin-imx8mm = "toradex"
-MACHINE_FAMILY:verdin-imx8mp = "toradex"
-
 include conf/distro/include/${MACHINE_FAMILY}.inc
 include conf/distro/include/${MACHINE}.inc
 
