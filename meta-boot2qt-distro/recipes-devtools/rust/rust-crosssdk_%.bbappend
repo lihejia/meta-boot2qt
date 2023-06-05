@@ -1,0 +1,1 @@
+ABIEXTENSION:class-crosssdk = ""
