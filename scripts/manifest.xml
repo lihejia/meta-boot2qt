@@ -5,12 +5,12 @@
           fetch="git://git.yoctoproject.org"/>
   <project name="poky"
            remote="yocto"
-           revision="refs/tags/yocto-4.2"
+           revision="refs/tags/yocto-4.2.1"
            upstream="mickledore"
            path="sources/poky"/>
   <project name="meta-mingw"
            remote="yocto"
-           revision="refs/tags/yocto-4.2"
+           revision="refs/tags/yocto-4.2.1"
            upstream="mickledore"
            path="sources/meta-mingw"/>
 
@@ -19,7 +19,7 @@
           fetch="git://git.openembedded.org"/>
   <project name="meta-openembedded"
            remote="oe"
-           revision="2d89a469e5f6a209fdc50bf447cd645929e4b735"
+           revision="928658212611ea457a5eacec48f0760e03269a24"
            upstream="mickledore"
            path="sources/meta-openembedded"/>
 
@@ -40,20 +40,20 @@
           fetch="https://github.com/Freescale"/>
   <project name="meta-freescale"
            remote="freescale"
-           revision="20c1612e983ae07a274a1deb36d347a98976ccf5"
+           revision="8995442f5432852a0313d83eb5fbc0fbd9e1c595"
            upstream="master"
            path="sources/meta-freescale"/>
   <project name="meta-freescale-3rdparty"
            remote="freescale"
-           revision="48cc5dd42007d09295677bc8bc0377fe96b5b270"
+           revision="91335c75468cf0f6a76ae48e42d38ae9cb05e9c6"
            upstream="master"
            path="sources/meta-freescale-3rdparty"/>
 
   <!-- Raspberry Pi -->
   <project name="meta-raspberrypi"
            remote="yocto"
-           revision="bf948e0aa87ee0c10bdf85f99b2632915e6d2039"
-           upstream="master"
+           revision="aa0aed9a08d6578a18c4eeb3b44ed8354a57ebee"
+           upstream="mickledore"
            path="sources/meta-raspberrypi"/>
 
   <!-- Intel -->
@@ -61,8 +61,8 @@
           fetch="git://git.yoctoproject.org"/>
   <project name="meta-intel"
            remote="intel"
-           revision="6f552203593e8b305460eeb7551f6a3428e3fa67"
-           upstream="master"
+           revision="a0ea4e5d395579e70f1057f1f1222c8a2b55bd96"
+           upstream="mickledore"
            path="sources/meta-intel"/>
 
   <!-- NVIDIA -->
@@ -70,7 +70,7 @@
           fetch="https://github.com/OE4T"/>
   <project name="meta-tegra"
            remote="OE4T"
-           revision="7b0be97e99b1c7d4ada814e6cbcd2aee75f633b4"
+           revision="2b379b7bfa0082e3114c6c4ca51117133d1ada53"
            upstream="mickledore"
            path="sources/meta-tegra"/>
 </manifest>
