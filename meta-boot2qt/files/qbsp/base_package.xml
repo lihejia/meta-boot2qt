@@ -3,7 +3,7 @@
   <Version>@QBSP_VERSION@</Version>
   <ReleaseDate>@RELEASEDATE@</ReleaseDate>
   <DisplayName>@TARGET@</DisplayName>
-  <Description>@NAME@ for @TARGET@</Description>
+  <Description>@NAME@ for @TARGET@.&lt;br&gt;Based on Yocto @YOCTO@ release.</Description>
   <Dependencies>@LICENSEDEPENDENCY@</Dependencies>
   <Script>installscript.qs</Script>
   <Default>false</Default>
