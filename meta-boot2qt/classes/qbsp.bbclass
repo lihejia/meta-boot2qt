@@ -102,6 +102,7 @@ patch_installer_files() {
         -e "s#@TOOLCHAIN_HOST_TYPE@#${TOOLCHAIN_HOST_TYPE}#" \
         -e "s#@DOCKER_ARCH@#${@'arm64' if d.getVar('SDKMACHINE') == 'aarch64' else 'amd64'}#" \
         -e "s#@VERSION@#${PV}#" \
+        -e "s#@YOCTO@#${DISTRO_VERSION} (${DISTRO_CODENAME})#" \
         -i ${1}/*
 }
 
