@@ -32,6 +32,7 @@ PACKAGECONFIG += " \
     glib \
     sql-sqlite \
     tslib \
+    use-gold-linker \
     xkbcommon \
     "
 
