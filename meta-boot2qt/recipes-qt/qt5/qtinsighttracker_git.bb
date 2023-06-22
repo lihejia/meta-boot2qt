@@ -38,7 +38,7 @@ SRC_URI = "\
     git://codereview.qt-project.org/qt/tqtc-qtinsighttracker;${QT_MODULE_BRANCH_PARAM};protocol=ssh \
 "
 
-SRCREV = "5ce28e02d109773643efe682f3772f6e92e391cc"
+SRCREV = "dfba09946fb19c657c162e6f2797fae587435d9a"
 
 DEPENDS += "qtbase qtdeclarative qtdeclarative-native"
 
