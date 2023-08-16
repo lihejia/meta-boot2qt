@@ -5,6 +5,8 @@ Subject: [PATCH] Fix API break in init_disassemble_info
 
 API break due to init_disassemble_info() got an extra parameter,
 see http://trofi.github.io/posts/254-binutils-2.39.html
+
+Upstream-Status: Backport
 ---
  tools/perf/util/annotate.c | 15 ++++++++++++++-
  1 file changed, 14 insertions(+), 1 deletion(-)

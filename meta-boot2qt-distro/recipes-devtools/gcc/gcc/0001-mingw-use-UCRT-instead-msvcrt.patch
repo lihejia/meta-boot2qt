@@ -3,6 +3,7 @@ From: Samuli Piippo <samuli.piippo@qt.io>
 Date: Tue, 16 Aug 2022 13:21:28 +0000
 Subject: [PATCH] mingw: use UCRT instead msvcrt
 
+Upstream-Status: Pending
 ---
  gcc/config/i386/mingw32.h | 2 +-
  1 file changed, 1 insertion(+), 1 deletion(-)

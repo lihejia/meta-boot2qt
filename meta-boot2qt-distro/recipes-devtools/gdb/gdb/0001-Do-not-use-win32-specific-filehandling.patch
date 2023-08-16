@@ -5,6 +5,8 @@ Subject: [PATCH] Do not use win32 specific filehandling
 
 PyFile_FromString and PyFile_AsFile are no longer available in python3
 see https://sourceware.org/bugzilla/show_bug.cgi?id=15600
+
+Upstream-Status: Pending
 ---
  gdb/python/python.c | 2 +-
  1 file changed, 1 insertion(+), 1 deletion(-)
