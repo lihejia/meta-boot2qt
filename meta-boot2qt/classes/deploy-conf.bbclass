@@ -43,7 +43,7 @@ IMAGE_CMD:conf() {
         IMAGE_UNCOMPRESSED_SIZE=$(xz --robot --list ${IMGDEPLOYDIR}/${IMAGE_LINK_NAME}.${DEPLOY_CONF_IMAGE_TYPE} | awk -F ' ' '{if (NR==2){ print $5 }}')
     fi
 
-    cat > ${IMGDEPLOYDIR}/${IMAGE_NAME}${IMAGE_NAME_SUFFIX}.conf <<EOF
+    cat > ${IMGDEPLOYDIR}/${IMAGE_NAME}.conf <<EOF
 [${MACHINE}]
 name=${DEPLOY_CONF_NAME}
 platform=${MACHINE}
