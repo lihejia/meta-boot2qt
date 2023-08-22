@@ -1,1 +1,1 @@
-RDEPENDS:${PN}:remove:tegra = " gcc-8-cross-canadian-${TRANSLATED_TARGET_ARCH}"
+RDEPENDS:${PN}:remove:tegra = " gcc-for-nvcc-cross-canadian-${TRANSLATED_TARGET_ARCH}"
