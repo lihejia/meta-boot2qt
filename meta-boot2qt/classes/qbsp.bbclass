@@ -27,7 +27,7 @@
 ##
 ############################################################################
 
-inherit nopackages abi-arch siteinfo
+inherit nopackages abi-arch siteinfo image-artifact-names
 
 FILESEXTRAPATHS:prepend := "${BOOT2QTBASE}/files/qbsp:"
 
@@ -67,7 +67,7 @@ VERSION_AUTO_INCREMENT[vardepsexclude] = "DATETIME"
 DEPLOY_CONF_NAME ?= "${MACHINE}"
 RELEASEDATE = "${@time.strftime('%Y-%m-%d',time.gmtime())}"
 
-IMAGE_PACKAGE = "${QBSP_IMAGE_TASK}-${MACHINE}.7z"
+IMAGE_PACKAGE = "${QBSP_IMAGE_TASK}${IMAGE_MACHINE_SUFFIX}${IMAGE_NAME_SUFFIX}.7z"
 SDK_NAME = "${DISTRO}-${SDK_MACHINE}-${QBSP_SDK_TASK}-${MACHINE}.${SDK_POSTFIX}"
 SDK_POSTFIX = "sh"
 SDK_POSTFIX:sdkmingw32 = "tar.xz"
