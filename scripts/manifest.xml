@@ -5,12 +5,12 @@
           fetch="git://git.yoctoproject.org"/>
   <project name="poky"
            remote="yocto"
-           revision="refs/tags/yocto-3.1.24"
+           revision="refs/tags/yocto-3.1.27"
            upstream="dunfell"
            path="sources/poky"/>
   <project name="meta-mingw"
            remote="yocto"
-           revision="refs/tags/yocto-3.1.24"
+           revision="refs/tags/yocto-3.1.27"
            upstream="dunfell"
            path="sources/meta-mingw"/>
 
@@ -19,7 +19,7 @@
           fetch="git://git.openembedded.org"/>
   <project name="meta-openembedded"
            remote="oe"
-           revision="116bfe8d5e5851e7fc5424f40da8691a19c5b5ee"
+           revision="b8b0b06821d4d4df0cce4f07fa31a8ca1dd38f46"
            upstream="dunfell"
            path="sources/meta-openembedded"/>
   <project name="meta-python2"
@@ -45,7 +45,7 @@
           fetch="https://github.com/Freescale"/>
   <project name="meta-freescale"
            remote="freescale"
-           revision="e353e020f161d6674c825e8abc9bdcece71ca8a5"
+           revision="f66fdef1c2dc735690a7ec7dd44a534d69ea3918"
            upstream="dunfell"
            path="sources/meta-freescale"/>
   <project name="meta-freescale-3rdparty"
@@ -66,7 +66,7 @@
           fetch="git://git.yoctoproject.org"/>
   <project name="meta-intel"
            remote="intel"
-           revision="472ea60857a56c6b08c64af3f6ed8b23d7cb0d21"
+           revision="e482213f37828216c7a7df68ff353652cc865ec1"
            upstream="dunfell"
            path="sources/meta-intel"/>
 
@@ -75,7 +75,7 @@
           fetch="https://github.com/OE4T"/>
   <project name="meta-tegra"
            remote="OE4T"
-           revision="5260d103badac09e0192547cd3736059a355e43d"
+           revision="133446740965f2ec7c97694d163d47db4009aa83"
            upstream="dunfell"
            path="sources/meta-tegra"/>
   <!-- internal layer for the nvidia devnet downloads -->
@@ -92,12 +92,12 @@
           fetch="git://git.toradex.com"/>
   <project name="meta-toradex-bsp-common"
            remote="toradex"
-           revision="f88e4c50e64ca144a7a15bd50c92a13d325f6780"
+           revision="ea047be150a35d5c9be5617f132c9c0dbf7c249b"
            upstream="dunfell-5.x.y"
            path="sources/meta-toradex-bsp-common"/>
   <project name="meta-toradex-nxp"
            remote="toradex"
-           revision="b288744310a77181db0fde2bee5d86e7d890f28b"
+           revision="8797f291ca2d9c8e0b2efedf37bf3bd10709ee81"
            upstream="dunfell-5.x.y"
            path="sources/meta-toradex-nxp"/>
 
