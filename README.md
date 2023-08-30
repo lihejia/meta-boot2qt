@@ -1,14 +1,14 @@
 Meta layer for Boot to Qt Software Stack
 ========================================
 
-Boot to Qt (b2qt) is the reference distro used in Qt for Device Creation [1].
+Boot to Qt (b2qt) is the reference distro used in Qt Embedded development [1].
 It combines Poky, Qt and various BSP meta layers to provide an integrated
 solution for building device images and toolchains with the latest Qt version.
 
 Currently used dependencies, meta repositories and their revisions are shown in
 scripts/manifest.xml
 
-[1] http://www.qt.io/qt-for-device-creation/
+[1] https://doc.qt.io/embedded.html#boot2qt
 
 Sources
 -------
@@ -46,10 +46,5 @@ https://code.qt.io/cgit/yocto/boot2qt-manifest.git/tree/ repository.
 A separate manifest file is available for each release and all the
 development branches have manifests that follow the latest changes.
 
-If you have already cloned the meta-boot2qt repository, you can alternatively
-use the `b2qt-init-build-env` script to initialize the build environment:
-
-  ./b2qt-init-build-env init --device <name>
-
 For more information about using Boot to Qt, see:
-https://doc.qt.io/QtForDeviceCreation/b2qt-index.html
+https://doc.qt.io/Boot2Qt/index.html
