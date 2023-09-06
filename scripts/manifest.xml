@@ -5,12 +5,12 @@
           fetch="git://git.yoctoproject.org"/>
   <project name="poky"
            remote="yocto"
-           revision="refs/tags/yocto-4.2.2"
+           revision="refs/tags/yocto-4.2.3"
            upstream="mickledore"
            path="sources/poky"/>
   <project name="meta-mingw"
            remote="yocto"
-           revision="refs/tags/yocto-4.2.2"
+           revision="refs/tags/yocto-4.2.3"
            upstream="master"
            path="sources/meta-mingw"/>
 
@@ -19,7 +19,7 @@
           fetch="git://git.openembedded.org"/>
   <project name="meta-openembedded"
            remote="oe"
-           revision="03fd1d368ac19793b3e4c35159ba2ce802247e4d"
+           revision="41fffef6b044b2722aa13f7e7648a3f848231851"
            upstream="mickledore"
            path="sources/meta-openembedded"/>
 
@@ -31,8 +31,8 @@
           fetch="ssh://codereview.qt-project.org/yocto"/>
   <project name="meta-qt6"
            remote="qt"
-           revision="dev"
-           upstream="dev"
+           revision="6.6"
+           upstream="6.6"
            path="sources/meta-qt6"/>
 
   <!-- NXP -->
@@ -40,12 +40,12 @@
           fetch="https://github.com/Freescale"/>
   <project name="meta-freescale"
            remote="freescale"
-           revision="8995442f5432852a0313d83eb5fbc0fbd9e1c595"
+           revision="e4d721f735aba27f0f1a478dba1b28f738cd1e9d"
            upstream="master"
            path="sources/meta-freescale"/>
   <project name="meta-freescale-3rdparty"
            remote="freescale"
-           revision="91335c75468cf0f6a76ae48e42d38ae9cb05e9c6"
+           revision="b3be00d8c8cd80d89b04b4dc81bf008025d0c53a"
            upstream="master"
            path="sources/meta-freescale-3rdparty"/>
 
@@ -61,7 +61,7 @@
           fetch="git://git.yoctoproject.org"/>
   <project name="meta-intel"
            remote="intel"
-           revision="a0ea4e5d395579e70f1057f1f1222c8a2b55bd96"
+           revision="b572565b942197ef017b9f2182ddeb318c6d4a77"
            upstream="mickledore"
            path="sources/meta-intel"/>
 
@@ -70,7 +70,7 @@
           fetch="https://github.com/OE4T"/>
   <project name="meta-tegra"
            remote="OE4T"
-           revision="2b379b7bfa0082e3114c6c4ca51117133d1ada53"
+           revision="ce89087d3b97eb158a9c5066d0b6bfa641c9d6ea"
            upstream="mickledore"
            path="sources/meta-tegra"/>
 </manifest>
