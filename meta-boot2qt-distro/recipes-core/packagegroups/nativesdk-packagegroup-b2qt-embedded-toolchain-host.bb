@@ -45,6 +45,8 @@ RDEPENDS:${PN} = "\
     nativesdk-python3-modules \
     nativesdk-python3-misc \
     ${@bb.utils.contains("DISTRO_FEATURES", "wayland", "nativesdk-wayland-dev", "", d)} \
+    nativesdk-qtinterfaceframework-dev \
+    nativesdk-qtinterfaceframework-tools \
     "
 
 RDEPENDS:${PN}:remove:mingw32 = "\
