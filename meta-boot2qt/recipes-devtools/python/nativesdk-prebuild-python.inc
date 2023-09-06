@@ -41,46 +41,12 @@ S = "${WORKDIR}"
 
 PROVIDES += " \
     python3 \
-    python3-watchdog \
-    python3-path.py \
-    antlr4-python3-runtime \
-    python3-jinja2 \
-    python3-markupsafe \
-    qface \
+    python3-qface \
+    python3-html5lib \
+    python3-modules \
+    python3-misc \
     "
-
-RPROVIDES:${PN} += " \
-    python3-pkgutil \
-    python3-xml \
-    python3-crypt \
-    python3-compile \
-    python3-netserver \
-    python3-compression \
-    python3-numbers \
-    python3-unittest \
-    python3-netclient \
-    python3-math \
-    python3-ctypes \
-    python3-html \
-    python3-json \
-    python3-datetime \
-    python3-distutils \
-    python3-shell \
-    python3-stringold \
-    python3-email \
-    python3-threading \
-    python3-pprint \
-    python3-plistlib \
-    python3-io \
-    python3-pickle \
-    \
-    qface \
-    python3-jinja2 \
-    python3-watchdog \
-    python3-path.py \
-    python3-markupsafe \
-    antlr4-python3-runtime \
-    "
+RPROVIDES:${PN} += "${PROVIDES}"
 
 do_install() {
     install -d ${D}${includedir}/${PYTHON_DIR}

@@ -48,7 +48,5 @@ RDEPENDS:${PN} = "\
     "
 
 RDEPENDS:${PN}:remove:mingw32 = "\
-    nativesdk-python3-modules \
-    nativesdk-python3-misc \
     nativesdk-perl-modules \
     "
