@@ -28,4 +28,3 @@
 ############################################################################
 
 MACHINE_EXTRA_INSTALL_SDK += "libnss-mdns"
-MACHINE_EXTRA_INSTALL_SDK_HOST += "nativesdk-python3-html5lib"
