@@ -40,19 +40,19 @@
           fetch="https://github.com/Freescale"/>
   <project name="meta-freescale"
            remote="freescale"
-           revision="d9f77788e1902a7d999958575a955e701c1c1b61"
+           revision="c90c2c2f18badca14439e01bd3e891d1fd99b255"
            upstream="kirkstone"
            path="sources/meta-freescale"/>
   <project name="meta-freescale-3rdparty"
            remote="freescale"
-           revision="f6fa0fd8783ce69d07feaad0b7ca6759b5a4d5d6"
+           revision="fa18e5bf5abdabcc37d4bfbc3c46713cd9d19e2e"
            upstream="kirkstone"
            path="sources/meta-freescale-3rdparty"/>
 
   <!-- Raspberry Pi -->
   <project name="meta-raspberrypi"
            remote="yocto"
-           revision="dacad9302a92b0b7edf8546cdcad1f8ef753e462"
+           revision="80a12f7fddfeae28c43242765374e7ade3a2a59e"
            upstream="kirkstone"
            path="sources/meta-raspberrypi"/>
 
@@ -61,7 +61,7 @@
           fetch="git://git.yoctoproject.org"/>
   <project name="meta-intel"
            remote="intel"
-           revision="4c6cc14669d0e9de36e1a050ce4084ca14181722"
+           revision="1342bcdc5bfc6620737e7d195e7d9bd744348577"
            upstream="kirkstone"
            path="sources/meta-intel"/>
 
